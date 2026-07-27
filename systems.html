@@ -1,62 +1,169 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Aviation Systems</title>
+    <title>Aircraft Systems</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
 
-    <nav class="navbar">
-       <div class="logo">
+
+<nav class="navbar">
+
+    <div class="logo">
         AVIATION SYSTEMS
     </div>
 
+
     <div class="nav-links">
         <a href="index.html">Home</a>
-        <a href="#">Systems</a>
-        <a href="#">History</a>
-        <a href="#">Aircraft</a>
-        <a href="#">Simulations</a>
+        <a href="systems.html">Systems</a>
     </div>
 
-    </nav>
+</nav>
 
-    <section class="systems-page">
 
-    <h1>AIRCRAFT SYSTEMS</h1>
-        <p>
-            Explore the technology that keeps aircraft safe.
-        </p>
-         <div class="system-grid">
 
-        <div class="system-card">
-            <h2>TCAS</h2>
-            <p>Traffic Collision Avoidance System</p>
-        </div>
-         <div class="system-card">
-            <h2>TAWS</h2>
-            <p>Terrain Awareness and Warning System</p>
-        </div>
-         <div class="system-card">
-            <h2>Weather Radar</h2>
-            <p>Detects storms and dangerous weather.</p>
-        </div>
-          <div class="system-card">
-            <h2>FMS</h2>
-            <p>Flight Management System navigation computer.</p>
-        </div>
-          <div class="system-card">
-            <h2>Autopilot</h2>
-            <p>Automatic aircraft control system.</p>
-        </div>
-          <div class="system-card">
-            <h2>Fly-By-Wire</h2>
-            <p>Computer controlled flight controls.</p>
-        </div>
+<h1 class="title">
+    AIRCRAFT SYSTEMS
+</h1>
 
-    </div>
 
-</section>
+
+<div class="system-grid">
+
+    <button onclick="openInfo('TCAS')">
+        TCAS
+    </button>
+
+
+    <button onclick="openInfo('TAWS')">
+        TAWS
+    </button>
+
+
+    <button onclick="openInfo('FMS')">
+        FMS
+    </button>
+
+
+    <button onclick="openInfo('Weather Radar')">
+        Weather Radar
+    </button>
+
+
+    <button onclick="openInfo('Autopilot')">
+        Autopilot
+    </button>
+
+
+    <button onclick="openInfo('ILS')">
+        ILS
+    </button>
+
+</div>
+
+
+
+
+<div id="info-panel">
+
+    <h2 id="info-title">
+        Select a system
+    </h2>
+
+
+    <p id="info-text">
+        Click a system to learn more.
+    </p>
+
+</div>
+
+
+
+
+
+<script>
+
+function openInfo(system) {
+
+    let title = document.getElementById("info-title");
+    let text = document.getElementById("info-text");
+
+    let panel = document.getElementById("info-panel");
+
+
+    panel.classList.add("show");
+
+
+    if (system === "TCAS") {
+
+        title.innerHTML = "TCAS";
+
+        text.innerHTML =
+        "Traffic Collision Avoidance System. Detects nearby aircraft and provides collision avoidance advisories.";
+
+    }
+
+
+    if (system === "TAWS") {
+
+        title.innerHTML = "TAWS";
+
+        text.innerHTML =
+        "Terrain Awareness and Warning System. Warns pilots about dangerous terrain and obstacles.";
+
+    }
+
+
+    if (system === "FMS") {
+
+        title.innerHTML = "FMS";
+
+        text.innerHTML =
+        "Flight Management System. Manages navigation, routes, and aircraft performance.";
+
+    }
+
+
+    if (system === "Weather Radar") {
+
+        title.innerHTML = "Weather Radar";
+
+        text.innerHTML =
+        "Detects storms, precipitation, and dangerous weather ahead of the aircraft.";
+
+    }
+
+
+    if (system === "Autopilot") {
+
+        title.innerHTML = "Autopilot";
+
+        text.innerHTML =
+        "Automatically controls aircraft flight path, altitude, and heading.";
+
+    }
+
+
+    if (system === "ILS") {
+
+        title.innerHTML = "ILS";
+
+        text.innerHTML =
+        "Instrument Landing System. Provides precision guidance during landing.";
+
+    }
+
+}
+
+
+</script>
+
+
+
 </body>
+
 </html>
