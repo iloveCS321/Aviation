@@ -11,6 +11,7 @@ body {
 }
 
 
+
 .navbar {
 
     height:80px;
@@ -71,7 +72,7 @@ body {
 
     margin-top:60px;
 
-    margin-left:120px;
+    margin-left:80px;
 
     font-size:45px;
 
@@ -106,6 +107,53 @@ body {
 
 
 
+.system-box {
+
+    width:420px;
+
+    padding:40px;
+
+    margin-left:80px;
+
+    margin-top:50px;
+
+    background:#0b1625;
+
+    border:1px solid #20364d;
+
+    border-radius:10px;
+
+    box-shadow:0 0 30px rgba(0,0,0,.5);
+
+    animation:boxAppear .8s ease;
+
+}
+
+
+
+@keyframes boxAppear {
+
+    from {
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
 .system-grid {
 
     display:flex;
@@ -116,12 +164,7 @@ body {
 
     gap:20px;
 
-    margin-top:50px;
-
-    margin-left:120px;
-
 }
-
 
 
 
