@@ -21,8 +21,11 @@
 
 
     <div class="nav-links">
+
         <a href="index.html">Home</a>
+
         <a href="systems.html">Systems</a>
+
     </div>
 
 </nav>
@@ -37,6 +40,7 @@
 
 
 
+<div class="system-box">
 
 <div class="system-grid">
 
@@ -93,6 +97,7 @@
 
 </div>
 
+</div>
 
 
 
@@ -100,20 +105,17 @@
 
 <div id="info-panel">
 
-
-    <button id="close-btn" onclick="closeInfo()">
-        ✕
-    </button>
+<button id="close-btn" onclick="closeInfo()">✕</button>
 
 
-    <h2 id="info-title">
-        Select a System
-    </h2>
+<h2 id="info-title">
+    Select a System
+</h2>
 
 
-    <p id="info-text">
-        Click a system to view information.
-    </p>
+<p id="info-text">
+    Click a system to view information.
+</p>
 
 
 </div>
@@ -126,90 +128,284 @@
 
 <script>
 
-
-function openInfo(system) {
-
-
-    let title = document.getElementById("info-title");
-
-    let text = document.getElementById("info-text");
-
-    let panel = document.getElementById("info-panel");
+function openInfo(system){
 
 
+let title=document.getElementById("info-title");
 
-    panel.classList.add("show");
+let text=document.getElementById("info-text");
+
+let panel=document.getElementById("info-panel");
+
+
+panel.classList.add("show");
 
 
 
-    let information = {
+let information = {
 
 
-        "TCAS":
-        "Traffic Collision Avoidance System. Detects nearby aircraft using transponders and provides pilots with collision avoidance advisories.",
+"TCAS":
+
+`
+<b>Traffic Collision Avoidance System (TCAS)</b><br><br>
+
+TCAS is an airborne safety system designed to prevent mid-air collisions between aircraft.
+
+It works independently from air traffic control by communicating with nearby aircraft through their transponders.
+
+TCAS calculates aircraft position, altitude, distance, and movement to determine if another aircraft is becoming a threat.
+
+<br><br>
+
+When a possible conflict is detected, TCAS first gives a <b>Traffic Advisory (TA)</b>.
+
+A TA tells pilots that nearby traffic requires attention.
+
+<br><br>
+
+If the situation becomes dangerous, TCAS issues a <b>Resolution Advisory (RA)</b>.
+
+The RA gives pilots a vertical command such as:
+
+<br><br>
+
+<b>CLIMB</b><br>
+<b>DESCEND</b><br>
+<b>MAINTAIN VERTICAL SPEED</b>
+
+<br><br>
+
+Modern TCAS systems coordinate between aircraft.
+
+One aircraft may receive a climb command while the other receives a descent command to avoid both aircraft moving toward each other.
+
+<br><br>
+
+<b>THE GOLDEN RULE OF TCAS:</b>
+
+<br><br>
+
+If TCAS issues a Resolution Advisory (RA), pilots follow the TCAS command immediately, even if it conflicts with an ATC instruction.
+
+<br><br>
+
+<b>"TCAS RA first. ATC second."</b>
+`,
 
 
-        "TAWS":
-        "Terrain Awareness and Warning System. Uses GPS, terrain databases, and aircraft data to warn pilots about dangerous terrain.",
 
+"TAWS":
 
-        "GPWS":
-        "Ground Proximity Warning System. Warns pilots when the aircraft is approaching the ground in an unsafe situation.",
+`
+<b>Terrain Awareness and Warning System (TAWS)</b><br><br>
 
+TAWS protects aircraft from Controlled Flight Into Terrain (CFIT).
 
-        "Windshear Detection":
-        "Detects sudden changes in wind speed and direction that can create dangerous conditions during takeoff and landing.",
+It combines GPS position, aircraft altitude, speed, and a worldwide terrain database.
 
+<br><br>
 
-        "Weather Radar":
-        "Uses radar waves to detect precipitation, storms, and hazardous weather ahead of the aircraft.",
+The system constantly checks if the aircraft flight path is approaching dangerous terrain.
 
+Warnings can include:
 
-        "Predictive Windshear":
-        "Uses forward-looking radar technology to detect windshear before the aircraft enters it.",
+<br><br>
 
+<b>TERRAIN AHEAD</b><br>
+<b>PULL UP</b><br>
+<b>TERRAIN TERRAIN</b>
 
-        "Stall Warning":
-        "Alerts pilots when the aircraft is approaching a stall condition.",
+<br><br>
 
-
-        "Overspeed Warning":
-        "Warns pilots when the aircraft exceeds safe speed limits.",
-
-
-        "Altitude Alert":
-        "Alerts pilots when approaching or deviating from a selected altitude.",
-
-
-        "Traffic Display":
-        "Displays nearby aircraft detected through onboard traffic systems."
-
-    };
+TAWS is especially important during night flights, poor weather, and mountain operations.
+`,
 
 
 
-    title.innerHTML = system;
+"GPWS":
 
-    text.innerHTML = information[system];
+`
+<b>Ground Proximity Warning System (GPWS)</b><br><br>
+
+GPWS was designed to warn pilots when the aircraft is dangerously close to the ground.
+
+It monitors altitude, descent rate, and terrain closure.
+
+<br><br>
+
+Common warnings include:
+
+<br><br>
+
+<b>SINK RATE</b><br>
+<b>TOO LOW TERRAIN</b><br>
+<b>PULL UP</b>
+
+<br><br>
+
+Modern aircraft use Enhanced GPWS (EGPWS), which adds terrain databases and GPS information.
+`,
+
+
+
+"Windshear Detection":
+
+`
+<b>Windshear Detection System</b><br><br>
+
+Windshear is a sudden change in wind speed or direction.
+
+It is dangerous because it can rapidly change an aircraft's lift and performance.
+
+<br><br>
+
+It is especially dangerous during:
+
+<br><br>
+
+- Takeoff<br>
+- Approach<br>
+- Landing
+
+<br><br>
+
+The system detects dangerous wind changes and warns pilots.
+`,
+
+
+
+"Weather Radar":
+
+`
+<b>Weather Radar</b><br><br>
+
+Aircraft weather radar uses radio waves to detect precipitation ahead.
+
+The radar sends signals forward and measures the energy reflected back.
+
+<br><br>
+
+Pilots use radar to avoid:
+
+<br><br>
+
+- Thunderstorms<br>
+- Heavy rain<br>
+- Severe weather
+
+<br><br>
+
+Weather radar does not detect every hazard, such as clear-air turbulence.
+`,
+
+
+
+"Predictive Windshear":
+
+`
+<b>Predictive Windshear System</b><br><br>
+
+Predictive windshear uses forward-looking radar to detect dangerous wind changes before the aircraft reaches them.
+
+<br><br>
+
+It gives pilots additional warning during:
+
+<br><br>
+
+- Takeoff<br>
+- Approach<br>
+- Landing
+
+<br><br>
+
+This allows crews to avoid dangerous conditions earlier.
+`,
+
+
+
+"Stall Warning":
+
+`
+<b>Stall Warning System</b><br><br>
+
+A stall happens when a wing loses enough airflow to produce lift.
+
+The system monitors angle of attack and warns pilots before a stall occurs.
+
+<br><br>
+
+Warnings may include:
+
+<br><br>
+
+- Stick shaker<br>
+- Audio alerts<br>
+- Visual warnings
+`,
+
+
+
+"Overspeed Warning":
+
+`
+<b>Overspeed Warning System</b><br><br>
+
+Aircraft have maximum safe speed limits.
+
+Overspeed warnings alert pilots when those limits are approached or exceeded.
+
+<br><br>
+
+Flying too fast can create dangerous aerodynamic forces and structural stress.
+`,
+
+
+
+"Altitude Alert":
+
+`
+<b>Altitude Alert System</b><br><br>
+
+Altitude alert systems help pilots maintain assigned flight levels.
+
+They warn pilots when approaching or leaving a selected altitude.
+`,
+
+
+
+"Traffic Display":
+
+`
+<b>Traffic Display System</b><br><br>
+
+Traffic displays show nearby aircraft detected by onboard traffic systems.
+
+They improve pilot awareness of surrounding aircraft and airspace.
+`
+
+};
+
+
+
+title.innerHTML = system;
+
+text.innerHTML = information[system];
 
 
 }
 
 
 
+function closeInfo(){
 
-function closeInfo() {
-
-    let panel = document.getElementById("info-panel");
-
-    panel.classList.remove("show");
+document.getElementById("info-panel").classList.remove("show");
 
 }
-
 
 
 </script>
-
 
 
 </body>
