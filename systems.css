@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+    background: #050b14;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 60px;
+
+    background: #07101d;
+    border-bottom: 1px solid #20364d;
+}
+
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+
+.nav-links a {
+    color: #9fb3c8;
+    text-decoration: none;
+    margin-left: 30px;
+}
+
+
+.nav-links a:hover {
+    color: white;
+}
+
+
+
+/* PAGE */
+
+.systems-page {
+    padding: 70px;
+}
+
+
+.systems-page h1 {
+
+    text-align: center;
+
+    font-size: 60px;
+
+    letter-spacing: 8px;
+
+}
+
+
+.systems-page > p {
+
+    text-align: center;
+
+    color: #9fb3c8;
+
+    font-size: 20px;
+
+    margin-bottom: 60px;
+
+}
+
+
+
+/* GRID */
+
+.system-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+
+
+/* CARDS */
+
+.system-card {
+
+    background: #0b1625;
+
+    border: 1px solid #20364d;
+
+    border-radius: 15px;
+
+    padding: 30px;
+
+    min-height: 170px;
+
+    transition: 0.25s;
+
+}
+
+
+.system-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color: #1479ff;
+
+    box-shadow: 0 0 25px #1479ff40;
+
+}
+
+
+.system-card h2 {
+
+    margin-top: 0;
+
+    color: #4da3ff;
+
+    font-size: 32px;
+
+}
+
+
+.system-card span {
+
+    color: #7dd3ff;
+
+    font-size: 14px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+}
+
+
+.system-card p {
+
+    color: #b8c7d9;
+
+    line-height: 1.5;
+
+}
