@@ -5,7 +5,7 @@
 
     <title>Aircraft Systems</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="systems.css">
 
 </head>
 
@@ -33,6 +33,7 @@
 <h1 class="title">
     AIRCRAFT SYSTEMS
 </h1>
+
 
 
 
@@ -96,7 +97,13 @@
 
 
 
+
 <div id="info-panel">
+
+
+    <button id="close-btn" onclick="closeInfo()">
+        ✕
+    </button>
 
 
     <h2 id="info-title">
@@ -116,6 +123,7 @@
 
 
 
+
 <script>
 
 
@@ -129,120 +137,75 @@ function openInfo(system) {
     let panel = document.getElementById("info-panel");
 
 
+
     panel.classList.add("show");
 
 
 
-    if(system === "TCAS") {
-
-        title.innerHTML = "TCAS";
-
-        text.innerHTML =
-        "Traffic Collision Avoidance System. Detects nearby aircraft using transponders and provides pilots with collision avoidance advisories.";
-
-    }
+    let information = {
 
 
-
-    if(system === "TAWS") {
-
-        title.innerHTML = "TAWS";
-
-        text.innerHTML =
-        "Terrain Awareness and Warning System. Uses terrain databases, GPS, and aircraft data to warn pilots of dangerous terrain.";
-
-    }
+        "TCAS":
+        "Traffic Collision Avoidance System. Detects nearby aircraft using transponders and provides pilots with collision avoidance advisories.",
 
 
-
-    if(system === "GPWS") {
-
-        title.innerHTML = "GPWS";
-
-        text.innerHTML =
-        "Ground Proximity Warning System. Warns pilots about unsafe proximity to the ground.";
-
-    }
+        "TAWS":
+        "Terrain Awareness and Warning System. Uses GPS, terrain databases, and aircraft data to warn pilots about dangerous terrain.",
 
 
-
-    if(system === "Windshear Detection") {
-
-        title.innerHTML = "Windshear Detection";
-
-        text.innerHTML =
-        "Detects sudden changes in wind direction and speed that could threaten aircraft during takeoff or landing.";
-
-    }
+        "GPWS":
+        "Ground Proximity Warning System. Warns pilots when the aircraft is approaching the ground in an unsafe situation.",
 
 
+        "Windshear Detection":
+        "Detects sudden changes in wind speed and direction that can create dangerous conditions during takeoff and landing.",
 
-    if(system === "Weather Radar") {
 
-        title.innerHTML = "Weather Radar";
+        "Weather Radar":
+        "Uses radar waves to detect precipitation, storms, and hazardous weather ahead of the aircraft.",
 
-        text.innerHTML =
-        "Uses radar waves to detect precipitation, storms, and dangerous weather ahead.";
 
-    }
+        "Predictive Windshear":
+        "Uses forward-looking radar technology to detect windshear before the aircraft enters it.",
+
+
+        "Stall Warning":
+        "Alerts pilots when the aircraft is approaching a stall condition.",
+
+
+        "Overspeed Warning":
+        "Warns pilots when the aircraft exceeds safe speed limits.",
+
+
+        "Altitude Alert":
+        "Alerts pilots when approaching or deviating from a selected altitude.",
+
+
+        "Traffic Display":
+        "Displays nearby aircraft detected through onboard traffic systems."
+
+    };
 
 
 
-    if(system === "Predictive Windshear") {
+    title.innerHTML = system;
 
-        title.innerHTML = "Predictive Windshear";
-
-        text.innerHTML =
-        "Uses weather radar technology to detect windshear before the aircraft enters it.";
-
-    }
-
-
-
-    if(system === "Stall Warning") {
-
-        title.innerHTML = "Stall Warning";
-
-        text.innerHTML =
-        "Warns pilots when the aircraft is approaching a stall condition.";
-
-    }
-
-
-
-    if(system === "Overspeed Warning") {
-
-        title.innerHTML = "Overspeed Warning";
-
-        text.innerHTML =
-        "Alerts pilots when the aircraft exceeds safe speed limits.";
-
-    }
-
-
-
-    if(system === "Altitude Alert") {
-
-        title.innerHTML = "Altitude Alert";
-
-        text.innerHTML =
-        "Warns pilots when approaching or deviating from a selected altitude.";
-
-    }
-
-
-
-    if(system === "Traffic Display") {
-
-        title.innerHTML = "Traffic Display";
-
-        text.innerHTML =
-        "Displays nearby aircraft detected through onboard traffic systems.";
-
-    }
+    text.innerHTML = information[system];
 
 
 }
+
+
+
+
+function closeInfo() {
+
+    let panel = document.getElementById("info-panel");
+
+    panel.classList.remove("show");
+
+}
+
 
 
 </script>
