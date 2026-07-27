@@ -1,147 +1,39 @@
-body {
-    margin: 0;
-    background: #050b14;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-
-.navbar {
-    height: 80px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 0 60px;
-
-    background: #07101d;
-    border-bottom: 1px solid #20364d;
-}
-
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    letter-spacing: 3px;
-}
-
-
-.nav-links a {
-    color: #9fb3c8;
-    text-decoration: none;
-    margin-left: 30px;
-}
-
-
-.nav-links a:hover {
-    color: white;
-}
-
 .systems-page {
-
     min-height: calc(100vh - 80px);
-
     display: flex;
     flex-direction: column;
-
+    align-items: center;
     justify-content: center;
-
-    padding: 40px 70px;
-
+    padding: 40px;
 }
-
-
 .systems-page h1 {
-
-    text-align: center;
-
     font-size: 60px;
-
     letter-spacing: 8px;
-
+    margin-bottom: 10px;
 }
-
-
-.systems-page > p {
-
-    text-align: center;
-
+.systems-page p {
     color: #9fb3c8;
-
-    font-size: 20px;
-
-    margin-bottom: 60px;
-
 }
-
-
 .system-grid {
-
+    width: 1100px;
+    max-width: 100%;
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
     gap: 25px;
-
+    margin-top: 50px;
 }
 
 .system-card {
-
     background: #0b1625;
-
     border: 1px solid #20364d;
-
     border-radius: 15px;
-
     padding: 30px;
-
-    min-height: 170px;
-
-    transition: 0.25s;
-
+    height: 150px;
 }
-
-
-.system-card:hover {
-
-    transform: translateY(-8px);
-
-    border-color: #1479ff;
-
-    box-shadow: 0 0 25px #1479ff40;
-
-}
-
-
 .system-card h2 {
-
-    margin-top: 0;
-
     color: #4da3ff;
-
-    font-size: 32px;
-
+    margin-top: 0;
 }
-
-
-.system-card span {
-
-    color: #7dd3ff;
-
-    font-size: 14px;
-
-    text-transform: uppercase;
-
-    letter-spacing: 2px;
-
-}
-
-
 .system-card p {
-
     color: #b8c7d9;
-
-    line-height: 1.5;
-
 }
