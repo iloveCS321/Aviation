@@ -2,8 +2,11 @@
 <html>
 
 <head>
+
     <title>Aircraft Systems</title>
+
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 
@@ -26,60 +29,88 @@
 
 
 
+
 <h1 class="title">
     AIRCRAFT SYSTEMS
 </h1>
 
 
 
+
 <div class="system-grid">
 
-    <button onclick="openInfo('TCAS')">
+
+    <div class="system-item" onclick="openInfo('TCAS')">
         TCAS
-    </button>
+    </div>
 
 
-    <button onclick="openInfo('TAWS')">
+    <div class="system-item" onclick="openInfo('TAWS')">
         TAWS
-    </button>
+    </div>
 
 
-    <button onclick="openInfo('FMS')">
-        FMS
-    </button>
+    <div class="system-item" onclick="openInfo('GPWS')">
+        GPWS
+    </div>
 
 
-    <button onclick="openInfo('Weather Radar')">
+    <div class="system-item" onclick="openInfo('Windshear Detection')">
+        Windshear Detection
+    </div>
+
+
+    <div class="system-item" onclick="openInfo('Weather Radar')">
         Weather Radar
-    </button>
+    </div>
 
 
-    <button onclick="openInfo('Autopilot')">
-        Autopilot
-    </button>
+    <div class="system-item" onclick="openInfo('Predictive Windshear')">
+        Predictive Windshear
+    </div>
 
 
-    <button onclick="openInfo('ILS')">
-        ILS
-    </button>
+    <div class="system-item" onclick="openInfo('Stall Warning')">
+        Stall Warning
+    </div>
+
+
+    <div class="system-item" onclick="openInfo('Overspeed Warning')">
+        Overspeed Warning
+    </div>
+
+
+    <div class="system-item" onclick="openInfo('Altitude Alert')">
+        Altitude Alert
+    </div>
+
+
+    <div class="system-item" onclick="openInfo('Traffic Display')">
+        Traffic Display
+    </div>
+
 
 </div>
+
 
 
 
 
 <div id="info-panel">
 
+
     <h2 id="info-title">
-        Select a system
+        Select a System
     </h2>
 
 
     <p id="info-text">
-        Click a system to learn more.
+        Click a system to view information.
     </p>
 
+
 </div>
+
 
 
 
@@ -87,9 +118,12 @@
 
 <script>
 
+
 function openInfo(system) {
 
+
     let title = document.getElementById("info-title");
+
     let text = document.getElementById("info-text");
 
     let panel = document.getElementById("info-panel");
@@ -98,64 +132,115 @@ function openInfo(system) {
     panel.classList.add("show");
 
 
-    if (system === "TCAS") {
+
+    if(system === "TCAS") {
 
         title.innerHTML = "TCAS";
 
         text.innerHTML =
-        "Traffic Collision Avoidance System. Detects nearby aircraft and provides collision avoidance advisories.";
+        "Traffic Collision Avoidance System. Detects nearby aircraft using transponders and provides pilots with collision avoidance advisories.";
 
     }
 
 
-    if (system === "TAWS") {
+
+    if(system === "TAWS") {
 
         title.innerHTML = "TAWS";
 
         text.innerHTML =
-        "Terrain Awareness and Warning System. Warns pilots about dangerous terrain and obstacles.";
+        "Terrain Awareness and Warning System. Uses terrain databases, GPS, and aircraft data to warn pilots of dangerous terrain.";
 
     }
 
 
-    if (system === "FMS") {
 
-        title.innerHTML = "FMS";
+    if(system === "GPWS") {
+
+        title.innerHTML = "GPWS";
 
         text.innerHTML =
-        "Flight Management System. Manages navigation, routes, and aircraft performance.";
+        "Ground Proximity Warning System. Warns pilots about unsafe proximity to the ground.";
 
     }
 
 
-    if (system === "Weather Radar") {
+
+    if(system === "Windshear Detection") {
+
+        title.innerHTML = "Windshear Detection";
+
+        text.innerHTML =
+        "Detects sudden changes in wind direction and speed that could threaten aircraft during takeoff or landing.";
+
+    }
+
+
+
+    if(system === "Weather Radar") {
 
         title.innerHTML = "Weather Radar";
 
         text.innerHTML =
-        "Detects storms, precipitation, and dangerous weather ahead of the aircraft.";
+        "Uses radar waves to detect precipitation, storms, and dangerous weather ahead.";
 
     }
 
 
-    if (system === "Autopilot") {
 
-        title.innerHTML = "Autopilot";
+    if(system === "Predictive Windshear") {
+
+        title.innerHTML = "Predictive Windshear";
 
         text.innerHTML =
-        "Automatically controls aircraft flight path, altitude, and heading.";
+        "Uses weather radar technology to detect windshear before the aircraft enters it.";
 
     }
 
 
-    if (system === "ILS") {
 
-        title.innerHTML = "ILS";
+    if(system === "Stall Warning") {
+
+        title.innerHTML = "Stall Warning";
 
         text.innerHTML =
-        "Instrument Landing System. Provides precision guidance during landing.";
+        "Warns pilots when the aircraft is approaching a stall condition.";
 
     }
+
+
+
+    if(system === "Overspeed Warning") {
+
+        title.innerHTML = "Overspeed Warning";
+
+        text.innerHTML =
+        "Alerts pilots when the aircraft exceeds safe speed limits.";
+
+    }
+
+
+
+    if(system === "Altitude Alert") {
+
+        title.innerHTML = "Altitude Alert";
+
+        text.innerHTML =
+        "Warns pilots when approaching or deviating from a selected altitude.";
+
+    }
+
+
+
+    if(system === "Traffic Display") {
+
+        title.innerHTML = "Traffic Display";
+
+        text.innerHTML =
+        "Displays nearby aircraft detected through onboard traffic systems.";
+
+    }
+
 
 }
 

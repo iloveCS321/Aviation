@@ -12,7 +12,6 @@ body {
 
 
 
-
 .navbar {
 
     height:80px;
@@ -32,8 +31,6 @@ body {
 }
 
 
-
-
 .logo {
 
     font-size:24px;
@@ -43,8 +40,6 @@ body {
     letter-spacing:3px;
 
 }
-
-
 
 
 .nav-links a {
@@ -58,7 +53,6 @@ body {
 }
 
 
-
 .nav-links a:hover {
 
     color:white;
@@ -67,15 +61,13 @@ body {
 
 
 
-
-
 .title {
 
     text-align:center;
 
-    margin-top:70px;
+    margin-top:60px;
 
-    font-size:60px;
+    font-size:55px;
 
     letter-spacing:8px;
 
@@ -83,69 +75,58 @@ body {
 
 
 
-
-
 .system-grid {
 
     display:grid;
 
-    grid-template-columns:repeat(3, 200px);
+    grid-template-columns:1fr;
+
+    justify-items:center;
 
     gap:30px;
 
-    justify-content:center;
-
-    margin-top:60px;
+    margin-top:50px;
 
 }
 
 
 
+.system-item {
 
+    font-size:30px;
 
-.system-grid button {
+    letter-spacing:3px;
 
-    height:120px;
-
-    background:#0b1625;
-
-    color:white;
-
-    border:1px solid #20364d;
-
-    border-radius:15px;
-
-    font-size:25px;
+    color:#b8c7d9;
 
     cursor:pointer;
 
+    transition:.3s;
 
-    animation:slideIn .7s ease;
+    animation:fadeIn .8s ease;
+
+}
+
+
+
+.system-item:hover {
+
+    color:#1479ff;
+
+    transform:translateX(15px);
 
 }
 
 
 
 
-.system-grid button:hover {
-
-    border-color:#1479ff;
-
-    transform:translateY(-8px);
-
-}
-
-
-
-
-
-@keyframes slideIn {
+@keyframes fadeIn {
 
     from {
 
         opacity:0;
 
-        transform:translateY(40px);
+        transform:translateY(30px);
 
     }
 
@@ -161,16 +142,13 @@ body {
 }
 
 
-
-
-
 #info-panel {
 
     position:fixed;
 
-    right:-450px;
-
     top:100px;
+
+    right:-450px;
 
     width:350px;
 
@@ -187,9 +165,6 @@ body {
 }
 
 
-
-
-
 #info-panel.show {
 
     right:0;
@@ -198,9 +173,7 @@ body {
 
 
 
-
-
-#info-panel h2 {
+#info-title {
 
     color:#4da3ff;
 
@@ -209,10 +182,7 @@ body {
 }
 
 
-
-
-
-#info-panel p {
+#info-text {
 
     color:#b8c7d9;
 
