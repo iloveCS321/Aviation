@@ -13,3 +13,26 @@ body{
     flex-direction: column;
     text-align: center;
 }
+h1{
+    font-size: 70px;
+    letter-spacing: 8px;
+    margin: 0;
+}
+p{
+    font-size: 20px;
+    color:cadetblue;
+    margin-top: 20px;
+}
+button{
+    margin-top: 40px;
+    padding: 15px, 35px;
+    font-size: 20px;
+    background: blue;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+button:hover{
+    background:blue
+}
