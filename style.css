@@ -1,5 +1,11 @@
 body{
     margin: 0;
+    padding: 0;
+}
+
+
+body{
+    margin: 0;
     height: 100vh;
     background: #031224;
     color: white;
