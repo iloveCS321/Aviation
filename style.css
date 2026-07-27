@@ -36,3 +36,37 @@ button{
 button:hover{
     background:darkgrey
 }
+
+.navbar{
+    height:80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 60px;
+
+    background:#050b14;
+    border-bottom: 1px solid#1c3148
+}
+
+.logo{
+    font-size: 24px
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a{
+    color: #9fb3c8;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3;
+}
+
+.nav-links a:hover{
+    color:white
+}
