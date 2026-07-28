@@ -1,125 +1,83 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>Aviation Incidents</title>
-    <link rel="stylesheet" href="accidents.css">
+<title>Aviation Incidents</title>
+<link rel="stylesheet" href="accidents.css">
 </head>
 
 <body>
 
 <nav class="navbar">
+<div class="logo">
+AVIATION INCIDENTS
+</div>
 
-    <div class="logo">
-        AVIATION INCIDENTS
-    </div>
-
-    <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="systems.html">Systems</a>
-        <a href="accidents.html">Accidents</a>
-    </div>
-
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="systems.html">Systems</a>
+<a href="accidents.html">Accidents</a>
+</div>
 </nav>
 
-
 <h1 class="title">
-    AVIATION INCIDENTS
+AVIATION INCIDENTS
 </h1>
 
 <div class="accident-box">
 
-
 <div class="category-title">
-    Major Accidents
+Major Accidents & Lessons Learned
 </div>
 
-
 <div class="accident-grid">
-
 
 <div class="accident-item" onclick="openAccident('PIA Flight 268')">
-    PIA Flight 268
+PIA Flight 268 — CFIT / Terrain Accident
 </div>
-
 
 <div class="accident-item" onclick="openAccident('Air France Flight 447')">
-    Air France Flight 447
+Air France Flight 447 — Stall / Systems Accident
 </div>
-
 
 <div class="accident-item" onclick="openAccident('Japan Airlines Flight 123')">
-    Japan Airlines Flight 123
+Japan Airlines Flight 123 — Structural Failure
 </div>
 
-
-<div class="accident-item" onclick="openAccident('United Airlines Flight 232')">
-    United Airlines Flight 232
+<div class="accident-item" onclick="openAccident('Asiana Flight 214')">
+Asiana Airlines Flight 214 — Landing / Automation Accident
 </div>
 
-
-<div class="accident-item" onclick="openAccident('Delta Flight 191')">
-    Delta Flight 191
+<div class="accident-item" onclick="openAccident('China Airlines Flight 611')">
+China Airlines Flight 611 — Structural Failure
 </div>
 
-
-<div class="accident-item" onclick="openAccident('Tenerife Disaster')">
-    Tenerife Airport Disaster
 </div>
-
-
-</div>
-
-
 
 <div class="category-title">
-    Security Incidents
+Aviation Security Incidents
 </div>
-
 
 <div class="accident-grid">
 
-
-<div class="accident-item" onclick="openAccident('Lockerbie')">
-    Pan Am Flight 103 — Lockerbie Bombing
-</div>
-
-
 <div class="accident-item" onclick="openAccident('Air France 8969')">
-    Air France Flight 8969 — Hijacking
+Air France Flight 8969 — Hijacking / Security Incident
 </div>
-
-
-<div class="accident-item" onclick="openAccident('Ethiopian 961')">
-    Ethiopian Airlines Flight 961 — Hijacking
-</div>
-
 
 </div>
 
-
 </div>
-
-
-
 
 <div id="accident-panel">
 
-
-<button id="close-btn" onclick="closeAccident()">
-    ✕
-</button>
-
+<button id="close-btn" onclick="closeAccident()">✕</button>
 
 <h2 id="accident-title">
-    Select an Incident
+Select an Incident
 </h2>
 
-
 <p id="accident-text">
-    Click an incident to view information.
+Click an incident to view details.
 </p>
-
 
 </div>
 
@@ -134,17 +92,20 @@ let panel=document.getElementById("accident-panel");
 
 panel.classList.add("show");
 
-
 let information={
-
 
 "PIA Flight 268":
 
 `
-<b>PIA Flight 268 (1992)</b><br><br>
+<b>PIA Flight 268 (1992) — CFIT / Terrain Accident</b><br><br>
 
 <b>Aircraft:</b><br>
 Airbus A300B4-203
+
+<br><br>
+
+<b>Date:</b><br>
+September 28, 1992
 
 <br><br>
 
@@ -153,89 +114,117 @@ Karachi, Pakistan → Kathmandu, Nepal
 
 <br><br>
 
-<b>Flight Crew:</b><br>
-Captain: Iftikhar Janjua<br>
-First Officer: Hassan Akhtar<br>
-Flight Engineer: Muhammad Ashraf
+<b>Survivors:</b><br>
+0
+
+<br><br>
+
+<b>Fatalities:</b><br>
+167 passengers and crew
+
+<br><br>
+
+<b>Category:</b><br>
+Controlled Flight Into Terrain (CFIT)
 
 <br><br>
 
 <b>What Happened:</b><br>
-
-Pakistan International Airlines Flight 268 crashed while approaching Kathmandu International Airport. The aircraft was performing a step-down approach through mountainous terrain.
+Pakistan International Airlines Flight 268 was approaching Kathmandu International Airport, one of the world's most challenging airports because of the surrounding Himalayan terrain.
 
 <br><br>
 
-The aircraft descended below the required altitude and struck a mountain south of the airport while the aircraft was still under normal operation.
+The Airbus A300 was performing a step-down approach where the aircraft had to descend at specific points while maintaining safe terrain clearance.
+
+<br><br>
+
+During the approach, the aircraft descended below the required altitude and continued toward rising terrain. The aircraft was operating normally, but the crew did not recognize the danger in time.
+
+<br><br>
+
+The aircraft struck a mountain south of Kathmandu Airport, killing everyone onboard.
 
 <br><br>
 
 <b>Cause:</b><br>
-
-Controlled Flight Into Terrain (CFIT) caused by incorrect altitude management, challenging terrain, and reduced situational awareness.
+Incorrect altitude management, challenging terrain, and limited terrain awareness technology.
 
 <br><br>
 
 <b>Related Systems:</b><br>
-
-TAWS / GPWS
+GPWS, TAWS, EGPWS
 
 <br><br>
 
 <b>Lesson Learned:</b><br>
-
-The accident showed the importance of terrain awareness systems. Modern EGPWS systems now use GPS, terrain databases, and aircraft data to warn pilots earlier about dangerous terrain.
+The accident showed the importance of terrain warning systems. Modern EGPWS uses GPS, terrain databases, and aircraft data to provide earlier warnings about dangerous terrain.
 `,
 
 
-
-"Air France Flight 447":
+"Asiana Flight 214":
 
 `
-<b>Air France Flight 447 (2009)</b><br><br>
+<b>Asiana Airlines Flight 214 (2013) — Landing / Automation Accident</b><br><br>
 
 <b>Aircraft:</b><br>
-Airbus A330-203
+Boeing 777-200ER
+
+<br><br>
+
+<b>Date:</b><br>
+July 6, 2013
 
 <br><br>
 
 <b>Route:</b><br>
-Rio de Janeiro, Brazil → Paris, France
+Seoul, South Korea → San Francisco, United States
 
 <br><br>
 
-<b>Flight Crew:</b><br>
-Captain: Marc Dubois<br>
-First Officer: Pierre-Cédric Bonin<br>
-First Officer: David Robert
+<b>Survivors:</b><br>
+304
+
+<br><br>
+
+<b>Fatalities:</b><br>
+3 passengers
+
+<br><br>
+
+<b>Category:</b><br>
+Landing Accident / Automation Management
 
 <br><br>
 
 <b>What Happened:</b><br>
-
-The aircraft encountered a storm over the Atlantic Ocean. Ice crystals blocked the pitot tubes, causing unreliable airspeed readings.
+Asiana Airlines Flight 214 was approaching San Francisco International Airport on a clear day when the aircraft became dangerously slow during the final approach.
 
 <br><br>
 
-The autopilot disconnected, and the aircraft entered a high-altitude stall. The crew was unable to recover before impact with the ocean.
+The crew expected the aircraft's automated systems to help maintain the correct approach speed. However, the aircraft's speed decreased below the safe target, and the pilots did not recognize the problem early enough.
+
+<br><br>
+
+The Boeing 777 approached the runway too low and too slow. During the final seconds before landing, the crew attempted to perform a go-around, but there was not enough time to recover.
+
+<br><br>
+
+The aircraft struck the seawall before the runway, causing the tail section to separate. The aircraft slid across the runway before coming to a stop.
 
 <br><br>
 
 <b>Cause:</b><br>
-
-Loss of reliable airspeed information combined with incorrect stall recovery actions.
+Loss of airspeed awareness, insufficient monitoring of automation, and delayed decision to perform a go-around.
 
 <br><br>
 
 <b>Related Systems:</b><br>
-
-Stall Warning System, Flight Displays, Automation
+Autothrottle, Flight Displays, Flight Controls, Stall Warning System
 
 <br><br>
 
 <b>Lesson Learned:</b><br>
-
-Improved high-altitude stall training and greater focus on aircraft automation awareness.
+The accident reinforced the importance of actively monitoring automation, maintaining manual flying skills, and following stabilized approach procedures.
 `,
 
 
@@ -243,228 +232,134 @@ Improved high-altitude stall training and greater focus on aircraft automation a
 "Japan Airlines Flight 123":
 
 `
-<b>Japan Airlines Flight 123 (1985)</b><br><br>
+<b>Japan Airlines Flight 123 (1985) — Structural Failure</b><br><br>
 
 <b>Aircraft:</b><br>
 Boeing 747SR
 
 <br><br>
 
-<b>Route:</b><br>
-Tokyo → Osaka, Japan
-
-<br><br>
-
-<b>Flight Crew:</b><br>
-Captain: Masami Takahama<br>
-First Officer: Yutaka Sasaki<br>
-Flight Engineer: Hiroshi Fukuda
-
-<br><br>
-
-<b>What Happened:</b><br>
-
-The aircraft suffered a rear pressure bulkhead failure shortly after takeoff.
-
-<br><br>
-
-The failure damaged the vertical stabilizer and destroyed most hydraulic systems, leaving the crew with very limited control.
-
-<br><br>
-
-<b>Cause:</b><br>
-
-Improper previous repairs caused structural fatigue and failure.
-
-<br><br>
-
-<b>Related Systems:</b><br>
-
-Aircraft Structure, Flight Controls, Redundancy
-
-<br><br>
-
-<b>Lesson Learned:</b><br>
-
-Changed aircraft maintenance standards and increased focus on structural inspections.
-`,
-
-
-
-"United Airlines Flight 232":
-
-`
-<b>United Airlines Flight 232 (1989)</b><br><br>
-
-<b>Aircraft:</b><br>
-McDonnell Douglas DC-10
+<b>Date:</b><br>
+August 12, 1985
 
 <br><br>
 
 <b>Route:</b><br>
-Denver → Chicago
+Tokyo Haneda → Osaka Itami
 
 <br><br>
 
-<b>Flight Crew:</b><br>
-Captain: Al Haynes<br>
-First Officer: William Records<br>
-Flight Engineer: Dudley Dvorak
+<b>Survivors:</b><br>
+4
 
 <br><br>
 
-<b>What Happened:</b><br>
-
-An engine failure destroyed all three hydraulic systems, leaving the aircraft without normal flight controls.
-
-<br><br>
-
-The crew controlled the aircraft using engine thrust adjustments and attempted an emergency landing.
-
-<br><br>
-
-<b>Cause:</b><br>
-
-Uncontained engine failure damaged critical control systems.
-
-<br><br>
-
-<b>Related Systems:</b><br>
-
-Flight Controls, Hydraulic Systems, Redundancy
-
-<br><br>
-
-<b>Lesson Learned:</b><br>
-
-Improved simulator training, system redundancy, and Crew Resource Management.
-`,
-
-
-
-"Delta Flight 191":
-
-`
-<b>Delta Flight 191 (1985)</b><br><br>
-
-<b>Aircraft:</b><br>
-Lockheed L-1011 TriStar
-
-<br><br>
-
-<b>Route:</b><br>
-Fort Lauderdale → Dallas/Fort Worth → Los Angeles
-
-<br><br>
-
-<b>Flight Crew:</b><br>
-Captain: John D. W. Morgan<br>
-First Officer: Robert A. Young
-
-<br><br>
-
-<b>What Happened:</b><br>
-
-The aircraft encountered a severe microburst windshear during approach into Dallas/Fort Worth.
-
-<br><br>
-
-The sudden wind changes caused a rapid loss of airspeed and lift.
-
-<br><br>
-
-<b>Cause:</b><br>
-
-Severe weather conditions and limited windshear detection technology at the time.
-
-<br><br>
-
-<b>Related Systems:</b><br>
-
-Predictive Windshear System, Weather Radar
-
-<br><br>
-
-<b>Lesson Learned:</b><br>
-
-Accelerated the development of airborne windshear detection systems.
-`,
-
-
-
-"Tenerife Disaster":
-
-`
-<b>Tenerife Airport Disaster (1977)</b><br><br>
-
-<b>Aircraft:</b><br>
-Two Boeing 747 aircraft
-
-<br><br>
-
-<b>Location:</b><br>
-Los Rodeos Airport, Tenerife
-
-<br><br>
-
-<b>What Happened:</b><br>
-
-Two aircraft collided on the runway after communication misunderstandings, heavy fog, and confusion over takeoff clearance.
-
-<br><br>
-
-<b>Cause:</b><br>
-
-Communication failure and lack of effective cockpit coordination.
-
-<br><br>
-
-<b>Related Systems:</b><br>
-
-Communication, Crew Resource Management
-
-<br><br>
-
-<b>Lesson Learned:</b><br>
-
-Created major improvements in cockpit communication and led to modern Crew Resource Management training.
-`,
-
-
-
-"Lockerbie":
-
-`
-<b>Pan Am Flight 103 (1988)</b><br><br>
-
-<b>Aircraft:</b><br>
-Boeing 747-121
-
-<br><br>
-
-<b>Route:</b><br>
-London → New York
-
-<br><br>
-
-<b>What Happened:</b><br>
-
-A bomb hidden inside checked luggage exploded while the aircraft was flying over Lockerbie, Scotland.
-
-<br><br>
-
-The aircraft broke apart in the air, causing the loss of everyone onboard and people on the ground.
+<b>Fatalities:</b><br>
+520 passengers and crew
 
 <br><br>
 
 <b>Category:</b><br>
-Aviation Security
+Aircraft Structural Failure
+
+<br><br>
+
+<b>What Happened:</b><br>
+Japan Airlines Flight 123 suffered a catastrophic failure shortly after takeoff when the rear pressure bulkhead failed.
+
+<br><br>
+
+The failure caused explosive decompression and destroyed a large section of the aircraft's tail. The damage also severed most hydraulic systems, leaving the pilots with extremely limited control of the aircraft.
+
+<br><br>
+
+The crew fought to control the aircraft for more than 30 minutes using engine power and the remaining control abilities. Despite their efforts, the aircraft eventually crashed into mountainous terrain.
+
+<br><br>
+
+Four passengers survived the accident, making it the deadliest single-aircraft accident in aviation history.
+
+<br><br>
+
+<b>Cause:</b><br>
+A previous improper repair caused structural fatigue, weakening the rear pressure bulkhead until it failed during flight.
+
+<br><br>
+
+<b>Related Systems:</b><br>
+Aircraft Structure, Hydraulic Systems, Flight Controls, Maintenance Systems
 
 <br><br>
 
 <b>Lesson Learned:</b><br>
+The accident changed aircraft maintenance standards worldwide and increased focus on structural inspections, repair quality, and fatigue prevention.
+`,
 
-Led to stronger baggage screening, improved airport security, and better tracking of checked luggage.
+
+"China Airlines Flight 611":
+
+`
+<b>China Airlines Flight 611 (2002) — Structural Failure</b><br><br>
+
+<b>Aircraft:</b><br>
+Boeing 747-209B
+
+<br><br>
+
+<b>Date:</b><br>
+May 25, 2002
+
+<br><br>
+
+<b>Route:</b><br>
+Taipei, Taiwan → Hong Kong
+
+<br><br>
+
+<b>Survivors:</b><br>
+0
+
+<br><br>
+
+<b>Fatalities:</b><br>
+225 passengers and crew
+
+<br><br>
+
+<b>Category:</b><br>
+Aircraft Structural Failure / Maintenance Failure
+
+<br><br>
+
+<b>What Happened:</b><br>
+China Airlines Flight 611 was cruising over the Taiwan Strait when the aircraft suddenly broke apart in mid-air.
+
+<br><br>
+
+The Boeing 747 had been operating normally before the accident. Investigators discovered that a previous tail strike incident years earlier had caused improper repairs to the aircraft's rear fuselage.
+
+<br><br>
+
+Over time, metal fatigue developed around the repaired area. The damage slowly spread until the aircraft structure could no longer withstand normal flight loads.
+
+<br><br>
+
+The aircraft separated at cruising altitude, causing all sections of the aircraft to fall into the ocean.
+
+<br><br>
+
+<b>Cause:</b><br>
+Structural failure caused by metal fatigue from improper previous repairs.
+
+<br><br>
+
+<b>Related Systems:</b><br>
+Aircraft Structure, Maintenance Systems, Structural Inspection
+
+<br><br>
+
+<b>Lesson Learned:</b><br>
+The accident highlighted the importance of accurate maintenance records, proper repairs, and detailed inspections of aging aircraft structures.
 `,
 
 
@@ -472,62 +367,83 @@ Led to stronger baggage screening, improved airport security, and better trackin
 "Air France 8969":
 
 `
-<b>Air France Flight 8969 (1994)</b><br><br>
+<b>Air France Flight 8969 (1994) — Hijacking / Security Incident</b><br><br>
 
 <b>Aircraft:</b><br>
-Airbus A300
+Airbus A300B2-1C
 
 <br><br>
 
-<b>What Happened:</b><br>
+<b>Date:</b><br>
+December 24, 1994
 
-The aircraft was hijacked in Algeria and later recovered during a counter-terrorism operation at Marseille Airport.
+<br><br>
+
+<b>Route:</b><br>
+Algiers, Algeria → Marseille, France
+
+<br><br>
+
+<b>Flight Crew:</b><br>
+Captain: Alain Bacos<br>
+First Officer: Denis Allex<br>
+Flight Engineer: Claude Valette
+
+<br><br>
+
+<b>Survivors:</b><br>
+217 passengers and crew
+
+<br><br>
+
+<b>Fatalities:</b><br>
+3 passengers
 
 <br><br>
 
 <b>Category:</b><br>
-Aviation Security
-
-<br><br>
-
-<b>Lesson Learned:</b><br>
-
-Improved airline security planning and emergency response procedures.
-`,
-
-
-
-"Ethiopian 961":
-
-`
-<b>Ethiopian Airlines Flight 961 (1996)</b><br><br>
-
-<b>Aircraft:</b><br>
-Boeing 767
+Aviation Security / Aircraft Hijacking
 
 <br><br>
 
 <b>What Happened:</b><br>
-
-The aircraft was hijacked and forced away from its intended route. The aircraft later ran out of fuel and crashed during an attempted water landing.
+Air France Flight 8969 was preparing to depart Algiers when four armed hijackers took control of the Airbus A300.
 
 <br><br>
 
-<b>Category:</b><br>
-Aviation Security
+The hijackers held passengers and crew hostage for several hours while negotiations took place. The situation became increasingly dangerous as the attackers threatened to destroy the aircraft.
+
+<br><br>
+
+The aircraft was eventually moved to Marseille, France. French special forces from the GIGN prepared a rescue operation after determining that negotiations were no longer effective.
+
+<br><br>
+
+During the assault, the flight crew helped protect passengers and assisted authorities while the aircraft was secured. The operation successfully ended the hijacking and saved most people onboard.
+
+<br><br>
+
+<b>Cause:</b><br>
+A deliberate terrorist hijacking attempt.
+
+<br><br>
+
+<b>Related Systems:</b><br>
+Cockpit Security, Emergency Procedures, Airport Security
 
 <br><br>
 
 <b>Lesson Learned:</b><br>
-
-Highlighted the dangers of hijacking situations and improved security procedures and crew training.
+The incident improved aviation security procedures, hijacking response planning, and cooperation between airlines, airports, and law enforcement.
 `
 
 };
 
 
-title.innerHTML=accident;
-text.innerHTML=information[accident];
+
+title.innerHTML = accident;
+
+text.innerHTML = information[accident];
 
 }
 
@@ -540,3 +456,7 @@ document.getElementById("accident-panel").classList.remove("show");
 }
 
 </script>
+
+</body>
+
+</html>
