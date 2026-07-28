@@ -46,12 +46,13 @@ body {
 .page-description {
     text-align:center;
     color:#9fb3c8;
+    margin-top:-20px;
     font-size:18px;
 }
 
 .accident-box {
-    width:70%;
-    margin:50px auto;
+    width:55%;
+    margin:50px 0 50px 80px;
     padding:35px;
     background:#0b1625;
     border:1px solid #20364d;
@@ -62,23 +63,25 @@ body {
 
 .category-title {
     color:#4da3ff;
-    font-size:28px;
+    font-size:25px;
     letter-spacing:3px;
     margin-bottom:20px;
+    text-shadow:0 0 10px #1479ff;
 }
 
 .accident-grid {
     display:grid;
     grid-template-columns:1fr;
-    gap:20px;
+    gap:18px;
+    margin-bottom:40px;
 }
 
 .accident-item {
-    padding:18px;
+    padding:15px;
     background:#07101d;
     border-left:3px solid #1479ff;
-    color:#c5d4e5;
-    font-size:20px;
+    color:#b8c7d9;
+    font-size:22px;
     letter-spacing:2px;
     cursor:pointer;
     transition:.3s;
@@ -86,69 +89,117 @@ body {
 }
 
 .accident-item:hover {
-    transform:translateX(15px);
     color:#4da3ff;
+    transform:translateX(15px);
     text-shadow:0 0 10px #1479ff;
 }
 
+
 #accident-panel {
+
     position:fixed;
     top:100px;
     right:-500px;
     width:420px;
     height:520px;
+
     background:#0b1625;
+
     border-left:2px solid #1479ff;
+
     padding:30px;
+
     overflow-y:auto;
+
     transition:.5s;
+
     box-shadow:-10px 0 30px rgba(0,0,0,.5);
+
 }
+
 
 #accident-panel.show {
     right:0;
 }
 
+
 #close-btn {
+
     position:absolute;
     top:15px;
     right:20px;
+
     background:none;
     border:none;
+
     color:white;
+
     font-size:25px;
+
     cursor:pointer;
+
 }
+
 
 #close-btn:hover {
+
     color:#4da3ff;
+
+    text-shadow:0 0 10px #1479ff;
+
 }
+
 
 #accident-title {
+
     color:#4da3ff;
+
     font-size:32px;
+
     letter-spacing:2px;
-    text-shadow:0 0 10px #1479ff;
+
+    text-shadow:0 0 10px #1479ff,0 0 20px #1479ff;
+
 }
+
 
 #accident-text {
+
     color:#b8c7d9;
+
     line-height:1.7;
+
     font-size:16px;
+
 }
+
 
 #accident-text b {
+
     color:white;
+
+    text-shadow:0 0 5px #1479ff;
+
 }
 
+
 @keyframes fadeIn {
+
     from {
+
         opacity:0;
+
         transform:translateY(30px);
+
     }
 
+
     to {
+
         opacity:1;
+
         transform:translateY(0);
+
     }
+
 }
