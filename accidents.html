@@ -27,6 +27,103 @@
     AVIATION INCIDENTS
 </h1>
 
+<div class="accident-box">
+
+
+<div class="category-title">
+    Major Accidents
+</div>
+
+
+<div class="accident-grid">
+
+
+<div class="accident-item" onclick="openAccident('PIA Flight 268')">
+    PIA Flight 268
+</div>
+
+
+<div class="accident-item" onclick="openAccident('Air France Flight 447')">
+    Air France Flight 447
+</div>
+
+
+<div class="accident-item" onclick="openAccident('Japan Airlines Flight 123')">
+    Japan Airlines Flight 123
+</div>
+
+
+<div class="accident-item" onclick="openAccident('United Airlines Flight 232')">
+    United Airlines Flight 232
+</div>
+
+
+<div class="accident-item" onclick="openAccident('Delta Flight 191')">
+    Delta Flight 191
+</div>
+
+
+<div class="accident-item" onclick="openAccident('Tenerife Disaster')">
+    Tenerife Airport Disaster
+</div>
+
+
+</div>
+
+
+
+<div class="category-title">
+    Security Incidents
+</div>
+
+
+<div class="accident-grid">
+
+
+<div class="accident-item" onclick="openAccident('Lockerbie')">
+    Pan Am Flight 103 — Lockerbie Bombing
+</div>
+
+
+<div class="accident-item" onclick="openAccident('Air France 8969')">
+    Air France Flight 8969 — Hijacking
+</div>
+
+
+<div class="accident-item" onclick="openAccident('Ethiopian 961')">
+    Ethiopian Airlines Flight 961 — Hijacking
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+<div id="accident-panel">
+
+
+<button id="close-btn" onclick="closeAccident()">
+    ✕
+</button>
+
+
+<h2 id="accident-title">
+    Select an Incident
+</h2>
+
+
+<p id="accident-text">
+    Click an incident to view information.
+</p>
+
+
+</div>
+
+
 <script>
 
 function openAccident(accident){
