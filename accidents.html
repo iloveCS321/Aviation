@@ -2,19 +2,17 @@
 <html>
 
 <head>
-    <title>Aircraft Systems</title>
-    <link rel="stylesheet" href="systems.css">
+    <title>Aviation Incidents</title>
+    <link rel="stylesheet" href="accidents.css">
 </head>
 
 <body>
-
 
 <nav class="navbar">
 
     <div class="logo">
         AVIATION INCIDENTS
     </div>
-
 
     <div class="nav-links">
         <a href="index.html">Home</a>
@@ -24,213 +22,287 @@
 
 </nav>
 
+
+<h1 class="title">
+    MAJOR AVIATION INCIDENTS
+</h1>
+
+
+<p class="page-description">
+    Accidents and events that changed aviation safety forever.
+</p>
+
+
+<div class="accident-box">
+
+
+<h2 class="category-title">
+    Aircraft Accidents
+</h2>
+
+
+<div class="accident-grid">
+
+<div class="accident-item" onclick="openAccident('PIA Flight 268')">
+PIA Flight 268 — CFIT
+</div>
+
+<div class="accident-item" onclick="openAccident('Air France Flight 447')">
+Air France Flight 447 — Stall
+</div>
+
+<div class="accident-item" onclick="openAccident('Japan Airlines Flight 123')">
+Japan Airlines Flight 123 — Structural Failure
+</div>
+
+<div class="accident-item" onclick="openAccident('United Airlines Flight 232')">
+United Airlines Flight 232 — Flight Control Failure
+</div>
+
+<div class="accident-item" onclick="openAccident('Delta Flight 191')">
+Delta Flight 191 — Windshear
+</div>
+
+<div class="accident-item" onclick="openAccident('Tenerife Disaster')">
+Tenerife Disaster — Communication Failure
+</div>
+
+</div>
+
+
+<h2 class="category-title">
+    Security Events
+</h2>
+
+
+<div class="accident-grid">
+
+<div class="accident-item" onclick="openAccident('September 11 Attacks')">
+September 11 Attacks — Hijacking
+</div>
+
+<div class="accident-item" onclick="openAccident('Air France Flight 8969')">
+Air France Flight 8969 — Hijacking
+</div>
+
+<div class="accident-item" onclick="openAccident('Ethiopian Airlines Flight 961')">
+Ethiopian Airlines Flight 961 — Hijacking
+</div>
+
+</div>
+
+
+</div>
+
+
+<div id="accident-panel">
+
+<button id="close-btn" onclick="closeAccident()">✕</button>
+
+<h2 id="accident-title">
+Select an Incident
+</h2>
+
+<p id="accident-text">
+Click an incident to view information.
+</p>
+
+</div>
+
+
 <script>
 
-function openAccident(accident) {
+function openAccident(accident){
 
-    let title = document.getElementById("accident-title");
-    let text = document.getElementById("accident-text");
-    let panel = document.getElementById("accident-panel");
+let title=document.getElementById("accident-title");
+let text=document.getElementById("accident-text");
+let panel=document.getElementById("accident-panel");
 
-    panel.classList.add("show");
+panel.classList.add("show");
 
 
-    let information = {
+let information={
 
 
-        "PIA Flight 268":
+"PIA Flight 268":
+`
+<b>PIA Flight 268 (1992)</b><br><br>
 
-        `
-        <b>PIA Flight 268 (1992)</b><br><br>
+An Airbus A300 crashed while approaching Kathmandu, Nepal. The aircraft descended below the correct altitude during a step-down approach and struck mountainous terrain.
 
-        Pakistan International Airlines Flight 268 crashed while approaching Kathmandu, Nepal. The Airbus A300 descended below the correct altitude during a step-down approach and struck mountainous terrain.
+<br><br>
 
-        <br><br>
+<b>Related Systems:</b><br>
+TAWS / GPWS
 
-        <b>Related Systems:</b><br>
-        TAWS / GPWS
+<br><br>
 
-        <br><br>
+<b>Lesson Learned:</b><br>
+The accident highlighted the danger of Controlled Flight Into Terrain (CFIT) and helped improve terrain awareness systems such as EGPWS.
+`,
 
-        <b>Lesson Learned:</b><br>
-        The accident highlighted the danger of Controlled Flight Into Terrain (CFIT). It helped push the development of advanced terrain awareness systems such as EGPWS, which can warn pilots earlier using GPS and terrain databases.
-        `,
 
+"Air France Flight 447":
+`
+<b>Air France Flight 447 (2009)</b><br><br>
 
+An Airbus A330 crashed into the Atlantic Ocean after unreliable airspeed readings caused confusion and the aircraft entered a high-altitude stall.
 
-        "Air France Flight 447":
+<br><br>
 
-        `
-        <b>Air France Flight 447 (2009)</b><br><br>
+<b>Related Systems:</b><br>
+Stall Warning System, Flight Displays
 
-        An Airbus A330 crashed into the Atlantic Ocean after unreliable airspeed readings caused confusion in the cockpit. The aircraft entered a high-altitude stall.
+<br><br>
 
-        <br><br>
+<b>Lesson Learned:</b><br>
+Improved stall training and better understanding of aircraft automation.
+`,
 
-        <b>Related Systems:</b><br>
-        Stall Warning System, Flight Displays, Automation
 
-        <br><br>
+"Japan Airlines Flight 123":
+`
+<b>Japan Airlines Flight 123 (1985)</b><br><br>
 
-        <b>Lesson Learned:</b><br>
-        The accident led to improved high-altitude stall training and greater emphasis on understanding aircraft automation and manual flying skills.
-        `,
+A Boeing 747 suffered a rear pressure bulkhead failure, causing the loss of most hydraulic systems.
 
+<br><br>
 
+<b>Related Systems:</b><br>
+Aircraft Structure, Flight Controls
 
-        "Japan Airlines Flight 123":
+<br><br>
 
-        `
-        <b>Japan Airlines Flight 123 (1985)</b><br><br>
+<b>Lesson Learned:</b><br>
+Changed aircraft maintenance procedures and structural inspection requirements.
+`,
 
-        A Boeing 747 suffered a structural failure after a damaged rear pressure bulkhead caused the loss of most hydraulic systems.
 
-        <br><br>
+"United Airlines Flight 232":
+`
+<b>United Airlines Flight 232 (1989)</b><br><br>
 
-        <b>Related Systems:</b><br>
-        Aircraft Structure, Flight Controls, Redundancy
+A DC-10 suffered an engine failure that destroyed all hydraulic systems. The crew used engine thrust to control the aircraft.
 
-        <br><br>
+<br><br>
 
-        <b>Lesson Learned:</b><br>
-        The accident changed aircraft maintenance practices and increased focus on structural inspections and fatigue prevention.
-        `,
+<b>Related Systems:</b><br>
+Flight Controls, Redundancy
 
+<br><br>
 
+<b>Lesson Learned:</b><br>
+Improved simulator training and aircraft system redundancy.
+`,
 
-        "United Airlines Flight 232":
 
-        `
-        <b>United Airlines Flight 232 (1989)</b><br><br>
+"Delta Flight 191":
+`
+<b>Delta Flight 191 (1985)</b><br><br>
 
-        A DC-10 suffered an engine failure that destroyed all hydraulic systems. The crew managed to control the aircraft using engine thrust.
+A Lockheed L-1011 encountered severe microburst windshear during approach to Dallas/Fort Worth Airport.
 
-        <br><br>
+<br><br>
 
-        <b>Related Systems:</b><br>
-        Flight Controls, Hydraulic Systems, Crew Resource Management
+<b>Related Systems:</b><br>
+Windshear Detection, Predictive Windshear
 
-        <br><br>
+<br><br>
 
-        <b>Lesson Learned:</b><br>
-        The accident improved aircraft redundancy design and showed the importance of teamwork and simulator training.
-        `,
+<b>Lesson Learned:</b><br>
+Led to improved windshear detection technology and weather awareness.
+`,
 
 
+"Tenerife Disaster":
+`
+<b>Tenerife Airport Disaster (1977)</b><br><br>
 
-        "Delta Flight 191":
+Two Boeing 747 aircraft collided on the runway after communication errors and poor visibility.
 
-        `
-        <b>Delta Flight 191 (1985)</b><br><br>
+<br><br>
 
-        A Lockheed L-1011 encountered a severe microburst windshear during approach to Dallas/Fort Worth Airport.
+<b>Related Systems:</b><br>
+Communication, Crew Resource Management
 
-        <br><br>
+<br><br>
 
-        <b>Related Systems:</b><br>
-        Windshear Detection, Predictive Windshear
+<b>Lesson Learned:</b><br>
+Helped create modern Crew Resource Management and improved cockpit communication.
+`,
 
-        <br><br>
 
-        <b>Lesson Learned:</b><br>
-        The accident accelerated the development of airborne windshear detection systems and improved weather awareness procedures.
-        `,
+"September 11 Attacks":
+`
+<b>September 11 Attacks (2001)</b><br><br>
 
+Four commercial aircraft were hijacked during a coordinated terrorist attack.
 
+<br><br>
 
-        "Tenerife Disaster":
+<b>Category:</b><br>
+Aviation Security
 
-        `
-        <b>Tenerife Airport Disaster (1977)</b><br><br>
+<br><br>
 
-        Two Boeing 747 aircraft collided on the runway after communication misunderstandings and poor visibility caused a takeoff clearance conflict.
+<b>Lesson Learned:</b><br>
+Changed aviation security worldwide through reinforced cockpit doors and stronger airport screening.
+`,
 
-        <br><br>
 
-        <b>Related Systems:</b><br>
-        Communication, Crew Resource Management, Airport Procedures
+"Air France Flight 8969":
+`
+<b>Air France Flight 8969 (1994)</b><br><br>
 
-        <br><br>
+An Airbus A300 was hijacked in Algeria and later recovered during a counter-terrorism operation.
 
-        <b>Lesson Learned:</b><br>
-        Tenerife became one of the main reasons Crew Resource Management (CRM) was introduced, improving cockpit teamwork and communication.
-        `,
+<br><br>
 
+<b>Category:</b><br>
+Aviation Security
 
+<br><br>
 
-        "September 11 Attacks":
+<b>Lesson Learned:</b><br>
+Improved airline security planning and emergency response procedures.
+`,
 
-        `
-        <b>September 11 Attacks (2001)</b><br><br>
 
-        Four commercial aircraft were hijacked and used in a coordinated terrorist attack.
+"Ethiopian Airlines Flight 961":
+`
+<b>Ethiopian Airlines Flight 961 (1996)</b><br><br>
 
-        <br><br>
+A Boeing 767 was hijacked and later crashed after running out of fuel while being diverted.
 
-        <b>Category:</b><br>
-        Aviation Security
+<br><br>
 
-        <br><br>
+<b>Category:</b><br>
+Aviation Security
 
-        <b>Lesson Learned:</b><br>
-        The attacks completely changed aviation security worldwide. Changes included reinforced cockpit doors, stronger airport screening, and improved security procedures.
-        `,
+<br><br>
 
+<b>Lesson Learned:</b><br>
+Highlighted the dangers of hijacking situations and improved security procedures.
+`
 
+};
 
-        "Air France Flight 8969":
 
-        `
-        <b>Air France Flight 8969 (1994)</b><br><br>
-
-        An Airbus A300 was hijacked in Algeria and later recovered during a counter-terrorism operation at Marseille Airport.
-
-        <br><br>
-
-        <b>Category:</b><br>
-        Aviation Security
-
-        <br><br>
-
-        <b>Lesson Learned:</b><br>
-        The event influenced airline security planning, crisis response procedures, and cooperation between airlines and law enforcement.
-        `,
-
-
-
-        "Ethiopian Airlines Flight 961":
-
-        `
-        <b>Ethiopian Airlines Flight 961 (1996)</b><br><br>
-
-        A Boeing 767 was hijacked and later crashed after running out of fuel while the aircraft was being diverted.
-
-        <br><br>
-
-        <b>Category:</b><br>
-        Aviation Security
-
-        <br><br>
-
-        <b>Lesson Learned:</b><br>
-        The accident highlighted the dangers of hijacking situations and reinforced the importance of security procedures and crew training.
-        `
-
-
-    };
-
-
-    title.innerHTML = accident;
-    text.innerHTML = information[accident];
+title.innerHTML=accident;
+text.innerHTML=information[accident];
 
 }
 
 
+function closeAccident(){
 
-function closeAccident() {
-
-    document.getElementById("accident-panel").classList.remove("show");
+document.getElementById("accident-panel").classList.remove("show");
 
 }
 
 </script>
+
+
+</body>
+
+</html>
