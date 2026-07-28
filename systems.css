@@ -1,67 +1,41 @@
 body {
-
     margin:0;
-
     background:#050b14;
-
     color:white;
-
     font-family:Arial, sans-serif;
-
 }
-
 
 
 .navbar {
-
     height:80px;
-
     display:flex;
-
     align-items:center;
-
     justify-content:space-between;
-
     padding:0 60px;
-
     background:#07101d;
-
     border-bottom:1px solid #20364d;
-
 }
-
 
 
 .logo {
-
     font-size:24px;
-
     font-weight:bold;
-
     letter-spacing:3px;
-
+    text-shadow:0 0 10px #1479ff;
 }
-
 
 
 .nav-links a {
-
     color:#9fb3c8;
-
     text-decoration:none;
-
     margin-left:30px;
-
     transition:.3s;
-
 }
 
 
-
 .nav-links a:hover {
-
     color:#4da3ff;
-
+    text-shadow:0 0 10px #1479ff;
 }
 
 
@@ -77,6 +51,8 @@ body {
     font-size:45px;
 
     letter-spacing:6px;
+
+    text-shadow:0 0 10px #1479ff,0 0 30px #1479ff;
 
     animation:titleFade 1s ease;
 
@@ -123,7 +99,7 @@ body {
 
     border-radius:10px;
 
-    box-shadow:0 0 30px rgba(0,0,0,.5);
+    box-shadow:0 0 30px rgba(20,121,255,.15);
 
     animation:boxAppear .8s ease;
 
@@ -196,7 +172,7 @@ body {
 
     transform:translateX(20px) scale(1.05);
 
-    text-shadow:0 0 15px #1479ff;
+    text-shadow:0 0 15px #1479ff,0 0 30px #1479ff;
 
 }
 
@@ -335,6 +311,8 @@ body {
 
     color:white;
 
+    text-shadow:0 0 10px #1479ff;
+
 }
 
 
@@ -349,6 +327,8 @@ body {
 
     margin-top:10px;
 
+    text-shadow:0 0 10px #1479ff,0 0 20px #1479ff;
+
 }
 
 
@@ -360,5 +340,15 @@ body {
     font-size:15px;
 
     line-height:1.6;
+
+}
+
+
+
+#info-text b {
+
+    color:white;
+
+    text-shadow:0 0 5px #1479ff;
 
 }
