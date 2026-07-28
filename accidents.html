@@ -24,91 +24,8 @@
 
 
 <h1 class="title">
-    MAJOR AVIATION INCIDENTS
+    AVIATION INCIDENTS
 </h1>
-
-
-<p class="page-description">
-    Accidents and events that changed aviation safety forever.
-</p>
-
-
-<div class="accident-box">
-
-
-<h2 class="category-title">
-    Aircraft Accidents
-</h2>
-
-
-<div class="accident-grid">
-
-<div class="accident-item" onclick="openAccident('PIA Flight 268')">
-PIA Flight 268 — CFIT
-</div>
-
-<div class="accident-item" onclick="openAccident('Air France Flight 447')">
-Air France Flight 447 — Stall
-</div>
-
-<div class="accident-item" onclick="openAccident('Japan Airlines Flight 123')">
-Japan Airlines Flight 123 — Structural Failure
-</div>
-
-<div class="accident-item" onclick="openAccident('United Airlines Flight 232')">
-United Airlines Flight 232 — Flight Control Failure
-</div>
-
-<div class="accident-item" onclick="openAccident('Delta Flight 191')">
-Delta Flight 191 — Windshear
-</div>
-
-<div class="accident-item" onclick="openAccident('Tenerife Disaster')">
-Tenerife Disaster — Communication Failure
-</div>
-
-</div>
-
-
-<h2 class="category-title">
-    Security Events
-</h2>
-
-
-<div class="accident-grid">
-
-<div class="accident-item" onclick="openAccident('September 11 Attacks')">
-September 11 Attacks — Hijacking
-</div>
-
-<div class="accident-item" onclick="openAccident('Air France Flight 8969')">
-Air France Flight 8969 — Hijacking
-</div>
-
-<div class="accident-item" onclick="openAccident('Ethiopian Airlines Flight 961')">
-Ethiopian Airlines Flight 961 — Hijacking
-</div>
-
-</div>
-
-
-</div>
-
-
-<div id="accident-panel">
-
-<button id="close-btn" onclick="closeAccident()">✕</button>
-
-<h2 id="accident-title">
-Select an Incident
-</h2>
-
-<p id="accident-text">
-Click an incident to view information.
-</p>
-
-</div>
-
 
 <script>
 
@@ -125,118 +42,321 @@ let information={
 
 
 "PIA Flight 268":
+
 `
 <b>PIA Flight 268 (1992)</b><br><br>
 
-An Airbus A300 crashed while approaching Kathmandu, Nepal. The aircraft descended below the correct altitude during a step-down approach and struck mountainous terrain.
+<b>Aircraft:</b><br>
+Airbus A300B4-203
+
+<br><br>
+
+<b>Route:</b><br>
+Karachi, Pakistan → Kathmandu, Nepal
+
+<br><br>
+
+<b>Flight Crew:</b><br>
+Captain: Iftikhar Janjua<br>
+First Officer: Hassan Akhtar<br>
+Flight Engineer: Muhammad Ashraf
+
+<br><br>
+
+<b>What Happened:</b><br>
+
+Pakistan International Airlines Flight 268 crashed while approaching Kathmandu International Airport. The aircraft was performing a step-down approach through mountainous terrain.
+
+<br><br>
+
+The aircraft descended below the required altitude and struck a mountain south of the airport while the aircraft was still under normal operation.
+
+<br><br>
+
+<b>Cause:</b><br>
+
+Controlled Flight Into Terrain (CFIT) caused by incorrect altitude management, challenging terrain, and reduced situational awareness.
 
 <br><br>
 
 <b>Related Systems:</b><br>
+
 TAWS / GPWS
 
 <br><br>
 
 <b>Lesson Learned:</b><br>
-The accident highlighted the danger of Controlled Flight Into Terrain (CFIT) and helped improve terrain awareness systems such as EGPWS.
+
+The accident showed the importance of terrain awareness systems. Modern EGPWS systems now use GPS, terrain databases, and aircraft data to warn pilots earlier about dangerous terrain.
 `,
+
 
 
 "Air France Flight 447":
+
 `
 <b>Air France Flight 447 (2009)</b><br><br>
 
-An Airbus A330 crashed into the Atlantic Ocean after unreliable airspeed readings caused confusion and the aircraft entered a high-altitude stall.
+<b>Aircraft:</b><br>
+Airbus A330-203
+
+<br><br>
+
+<b>Route:</b><br>
+Rio de Janeiro, Brazil → Paris, France
+
+<br><br>
+
+<b>Flight Crew:</b><br>
+Captain: Marc Dubois<br>
+First Officer: Pierre-Cédric Bonin<br>
+First Officer: David Robert
+
+<br><br>
+
+<b>What Happened:</b><br>
+
+The aircraft encountered a storm over the Atlantic Ocean. Ice crystals blocked the pitot tubes, causing unreliable airspeed readings.
+
+<br><br>
+
+The autopilot disconnected, and the aircraft entered a high-altitude stall. The crew was unable to recover before impact with the ocean.
+
+<br><br>
+
+<b>Cause:</b><br>
+
+Loss of reliable airspeed information combined with incorrect stall recovery actions.
 
 <br><br>
 
 <b>Related Systems:</b><br>
-Stall Warning System, Flight Displays
+
+Stall Warning System, Flight Displays, Automation
 
 <br><br>
 
 <b>Lesson Learned:</b><br>
-Improved stall training and better understanding of aircraft automation.
+
+Improved high-altitude stall training and greater focus on aircraft automation awareness.
 `,
+
 
 
 "Japan Airlines Flight 123":
+
 `
 <b>Japan Airlines Flight 123 (1985)</b><br><br>
 
-A Boeing 747 suffered a rear pressure bulkhead failure, causing the loss of most hydraulic systems.
+<b>Aircraft:</b><br>
+Boeing 747SR
+
+<br><br>
+
+<b>Route:</b><br>
+Tokyo → Osaka, Japan
+
+<br><br>
+
+<b>Flight Crew:</b><br>
+Captain: Masami Takahama<br>
+First Officer: Yutaka Sasaki<br>
+Flight Engineer: Hiroshi Fukuda
+
+<br><br>
+
+<b>What Happened:</b><br>
+
+The aircraft suffered a rear pressure bulkhead failure shortly after takeoff.
+
+<br><br>
+
+The failure damaged the vertical stabilizer and destroyed most hydraulic systems, leaving the crew with very limited control.
+
+<br><br>
+
+<b>Cause:</b><br>
+
+Improper previous repairs caused structural fatigue and failure.
 
 <br><br>
 
 <b>Related Systems:</b><br>
-Aircraft Structure, Flight Controls
+
+Aircraft Structure, Flight Controls, Redundancy
 
 <br><br>
 
 <b>Lesson Learned:</b><br>
-Changed aircraft maintenance procedures and structural inspection requirements.
+
+Changed aircraft maintenance standards and increased focus on structural inspections.
 `,
+
 
 
 "United Airlines Flight 232":
+
 `
 <b>United Airlines Flight 232 (1989)</b><br><br>
 
-A DC-10 suffered an engine failure that destroyed all hydraulic systems. The crew used engine thrust to control the aircraft.
+<b>Aircraft:</b><br>
+McDonnell Douglas DC-10
+
+<br><br>
+
+<b>Route:</b><br>
+Denver → Chicago
+
+<br><br>
+
+<b>Flight Crew:</b><br>
+Captain: Al Haynes<br>
+First Officer: William Records<br>
+Flight Engineer: Dudley Dvorak
+
+<br><br>
+
+<b>What Happened:</b><br>
+
+An engine failure destroyed all three hydraulic systems, leaving the aircraft without normal flight controls.
+
+<br><br>
+
+The crew controlled the aircraft using engine thrust adjustments and attempted an emergency landing.
+
+<br><br>
+
+<b>Cause:</b><br>
+
+Uncontained engine failure damaged critical control systems.
 
 <br><br>
 
 <b>Related Systems:</b><br>
-Flight Controls, Redundancy
+
+Flight Controls, Hydraulic Systems, Redundancy
 
 <br><br>
 
 <b>Lesson Learned:</b><br>
-Improved simulator training and aircraft system redundancy.
+
+Improved simulator training, system redundancy, and Crew Resource Management.
 `,
+
 
 
 "Delta Flight 191":
+
 `
 <b>Delta Flight 191 (1985)</b><br><br>
 
-A Lockheed L-1011 encountered severe microburst windshear during approach to Dallas/Fort Worth Airport.
+<b>Aircraft:</b><br>
+Lockheed L-1011 TriStar
+
+<br><br>
+
+<b>Route:</b><br>
+Fort Lauderdale → Dallas/Fort Worth → Los Angeles
+
+<br><br>
+
+<b>Flight Crew:</b><br>
+Captain: John D. W. Morgan<br>
+First Officer: Robert A. Young
+
+<br><br>
+
+<b>What Happened:</b><br>
+
+The aircraft encountered a severe microburst windshear during approach into Dallas/Fort Worth.
+
+<br><br>
+
+The sudden wind changes caused a rapid loss of airspeed and lift.
+
+<br><br>
+
+<b>Cause:</b><br>
+
+Severe weather conditions and limited windshear detection technology at the time.
 
 <br><br>
 
 <b>Related Systems:</b><br>
-Windshear Detection, Predictive Windshear
+
+Predictive Windshear System, Weather Radar
 
 <br><br>
 
 <b>Lesson Learned:</b><br>
-Led to improved windshear detection technology and weather awareness.
+
+Accelerated the development of airborne windshear detection systems.
 `,
 
 
+
 "Tenerife Disaster":
+
 `
 <b>Tenerife Airport Disaster (1977)</b><br><br>
 
-Two Boeing 747 aircraft collided on the runway after communication errors and poor visibility.
+<b>Aircraft:</b><br>
+Two Boeing 747 aircraft
+
+<br><br>
+
+<b>Location:</b><br>
+Los Rodeos Airport, Tenerife
+
+<br><br>
+
+<b>What Happened:</b><br>
+
+Two aircraft collided on the runway after communication misunderstandings, heavy fog, and confusion over takeoff clearance.
+
+<br><br>
+
+<b>Cause:</b><br>
+
+Communication failure and lack of effective cockpit coordination.
 
 <br><br>
 
 <b>Related Systems:</b><br>
+
 Communication, Crew Resource Management
 
 <br><br>
 
 <b>Lesson Learned:</b><br>
-Helped create modern Crew Resource Management and improved cockpit communication.
+
+Created major improvements in cockpit communication and led to modern Crew Resource Management training.
 `,
 
 
-"September 11 Attacks":
-`
-<b>September 11 Attacks (2001)</b><br><br>
 
-Four commercial aircraft were hijacked during a coordinated terrorist attack.
+"Lockerbie":
+
+`
+<b>Pan Am Flight 103 (1988)</b><br><br>
+
+<b>Aircraft:</b><br>
+Boeing 747-121
+
+<br><br>
+
+<b>Route:</b><br>
+London → New York
+
+<br><br>
+
+<b>What Happened:</b><br>
+
+A bomb hidden inside checked luggage exploded while the aircraft was flying over Lockerbie, Scotland.
+
+<br><br>
+
+The aircraft broke apart in the air, causing the loss of everyone onboard and people on the ground.
 
 <br><br>
 
@@ -246,15 +366,25 @@ Aviation Security
 <br><br>
 
 <b>Lesson Learned:</b><br>
-Changed aviation security worldwide through reinforced cockpit doors and stronger airport screening.
+
+Led to stronger baggage screening, improved airport security, and better tracking of checked luggage.
 `,
 
 
-"Air France Flight 8969":
+
+"Air France 8969":
+
 `
 <b>Air France Flight 8969 (1994)</b><br><br>
 
-An Airbus A300 was hijacked in Algeria and later recovered during a counter-terrorism operation.
+<b>Aircraft:</b><br>
+Airbus A300
+
+<br><br>
+
+<b>What Happened:</b><br>
+
+The aircraft was hijacked in Algeria and later recovered during a counter-terrorism operation at Marseille Airport.
 
 <br><br>
 
@@ -264,15 +394,25 @@ Aviation Security
 <br><br>
 
 <b>Lesson Learned:</b><br>
+
 Improved airline security planning and emergency response procedures.
 `,
 
 
-"Ethiopian Airlines Flight 961":
+
+"Ethiopian 961":
+
 `
 <b>Ethiopian Airlines Flight 961 (1996)</b><br><br>
 
-A Boeing 767 was hijacked and later crashed after running out of fuel while being diverted.
+<b>Aircraft:</b><br>
+Boeing 767
+
+<br><br>
+
+<b>What Happened:</b><br>
+
+The aircraft was hijacked and forced away from its intended route. The aircraft later ran out of fuel and crashed during an attempted water landing.
 
 <br><br>
 
@@ -282,7 +422,8 @@ Aviation Security
 <br><br>
 
 <b>Lesson Learned:</b><br>
-Highlighted the dangers of hijacking situations and improved security procedures.
+
+Highlighted the dangers of hijacking situations and improved security procedures and crew training.
 `
 
 };
@@ -294,6 +435,7 @@ text.innerHTML=information[accident];
 }
 
 
+
 function closeAccident(){
 
 document.getElementById("accident-panel").classList.remove("show");
@@ -301,8 +443,3 @@ document.getElementById("accident-panel").classList.remove("show");
 }
 
 </script>
-
-
-</body>
-
-</html>
