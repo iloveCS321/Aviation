@@ -1,48 +1,4 @@
-body {
-    margin:0;
-    background:#020604;
-    color:white;
-    font-family:Arial, sans-serif;
-    overflow:hidden;
-}
-
-
-.navbar {
-    height:80px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:0 60px;
-    background:#030907cc;
-    border-bottom:1px solid #1aff6644;
-    backdrop-filter:blur(10px);
-}
-
-
-.logo {
-    font-size:24px;
-    font-weight:bold;
-    letter-spacing:3px;
-    color:#d5ffd5;
-    text-shadow:0 0 15px #20ff55;
-}
-
-
-.nav-links a {
-    color:#8dbb98;
-    text-decoration:none;
-    margin-left:30px;
-    transition:.3s;
-}
-
-
-.nav-links a:hover {
-    color:#ffffff;
-    text-shadow:0 0 15px #20ff55;
-}
-
-
-.hero {
+.hero{
     height:calc(100vh - 80px);
     position:relative;
     overflow:hidden;
@@ -52,165 +8,113 @@ body {
 }
 
 
-.hero::before {
-    content:"";
+.hero-plane{
     position:absolute;
-    width:700px;
-    height:700px;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:0.25;
+}
+
+
+.hero-content{
+    z-index:5;
+    text-align:center;
+}
+
+
+.hero-content h1{
+    font-size:60px;
+    letter-spacing:5px;
+}
+
+
+.radar{
+    position:absolute;
+    width:450px;
+    height:450px;
     border-radius:50%;
-    border:2px solid #32ff6a55;
+    border:2px solid rgba(0,255,100,0.5);
     background:
-    linear-gradient(#32ff6a18 1px, transparent 1px),
-    linear-gradient(90deg,#32ff6a18 1px, transparent 1px);
-    background-size:50px 50px;
-    box-shadow:
-    0 0 40px #20ff5544,
-    inset 0 0 50px #20ff5522;
-    animation:radarPulse 3s infinite;
+    radial-gradient(circle, transparent 0 20%, rgba(0,255,100,0.08) 21%, transparent 22%),
+    radial-gradient(circle, transparent 0 40%, rgba(0,255,100,0.08) 41%, transparent 42%),
+    radial-gradient(circle, transparent 0 60%, rgba(0,255,100,0.08) 61%, transparent 62%);
+    box-shadow:0 0 40px rgba(0,255,100,0.5);
+    z-index:2;
 }
 
 
-.hero::after {
+.radar:before,
+.radar:after{
     content:"";
     position:absolute;
-    width:350px;
-    height:350px;
-    border-radius:50%;
-    background:linear-gradient(
-        90deg,
-        transparent,
-        #32ff6a66
-    );
-    transform-origin:center right;
-    animation:radarSweep 4s linear infinite;
-    opacity:.6;
+    background:rgba(0,255,100,0.3);
 }
 
 
-.hero-content {
-    z-index:3;
+.radar:before{
+    width:100%;
+    height:1px;
+    top:50%;
 }
 
 
-.hero-content h1 {
-    font-size:70px;
-    letter-spacing:10px;
-    text-align:center;
-    color:#d9ffdf;
-    text-shadow:
-    0 0 10px #20ff55,
-    0 0 30px #20ff55;
-    animation:fadeIn 1s ease;
+.radar:after{
+    height:100%;
+    width:1px;
+    left:50%;
 }
 
 
-.hero-content p {
-    text-align:center;
-    color:#8affaa;
-    letter-spacing:4px;
-    font-family:"Courier New", monospace;
-}
-
-
-.radar-dot {
+.sweep{
     position:absolute;
-    width:10px;
-    height:10px;
-    background:#39ff14;
-    border-radius:50%;
-    box-shadow:0 0 20px #39ff14;
+    width:50%;
+    height:2px;
+    background:#00ff66;
+    top:50%;
+    left:50%;
+    transform-origin:left;
+    animation:scan 3s linear infinite;
+    box-shadow:0 0 15px #00ff66;
 }
 
 
-.dot1 {
-    top:30%;
-    left:35%;
-}
+@keyframes scan{
 
-.dot2 {
-    top:60%;
-    right:35%;
-}
-
-.dot3 {
-    top:45%;
-    right:25%;
-}
-
-
-.hero-plane {
-    position:absolute;
-    width:900px;
-    right:-100px;
-    bottom:-50px;
-    opacity:.18;
-    filter:
-    drop-shadow(0 0 30px #20ff55);
-    animation:planeAppear 1.5s ease;
-}
-
-
-@keyframes radarSweep {
-
-from {
+from{
     transform:rotate(0deg);
 }
 
-to {
+to{
     transform:rotate(360deg);
 }
 
 }
 
 
-@keyframes radarPulse {
-
-0% {
-    box-shadow:
-    0 0 20px #20ff5533,
-    inset 0 0 40px #20ff5522;
-}
-
-50% {
-    box-shadow:
-    0 0 70px #20ff5566,
-    inset 0 0 80px #20ff5544;
-}
-
-100% {
-    box-shadow:
-    0 0 20px #20ff5533,
-    inset 0 0 40px #20ff5522;
-}
-
+.blip{
+    position:absolute;
+    width:10px;
+    height:10px;
+    background:#00ff66;
+    border-radius:50%;
+    box-shadow:0 0 15px #00ff66;
 }
 
 
-@keyframes fadeIn {
-
-from {
-    opacity:0;
-    transform:translateY(30px);
-}
-
-to {
-    opacity:1;
-    transform:translateY(0);
-}
-
+.b1{
+    top:25%;
+    left:65%;
 }
 
 
-@keyframes planeAppear {
-
-from {
-    opacity:0;
-    transform:translateX(100px);
+.b2{
+    top:70%;
+    left:35%;
 }
 
-to {
-    opacity:.18;
-    transform:translateX(0);
-}
 
+.b3{
+    top:40%;
+    left:20%;
 }
