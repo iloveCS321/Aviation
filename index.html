@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 <title>Aviation</title>
 <link rel="stylesheet" href="style.css">
@@ -21,7 +22,9 @@ AVIATION HOMEPAGE
 
 </nav>
 
+
 <section class="hero">
+
 
 <div class="radar">
 
@@ -33,26 +36,132 @@ AVIATION HOMEPAGE
 
 </div>
 
+
 <div class="hero-content">
+
 <h1>AVIATION SYSTEMS</h1>
-<p>Aircraft Monitoring • Safety Systems • Flight Technology</p>
+
+<p>
+Aircraft Monitoring • Safety Systems • Flight Technology
+</p>
+
 </div>
 
+
+<div class="status-panel">
+
+<h2>SYSTEM STATUS</h2>
+
+
+<div class="status-item">
+<span class="dot online"></span>
+TCAS ........ ONLINE
+</div>
+
+
+<div class="status-item">
+<span class="dot online"></span>
+TAWS ........ ONLINE
+</div>
+
+
+<div class="status-item">
+<span class="dot online"></span>
+ADS-B ....... ONLINE
+</div>
+
+
+<div class="status-item">
+<span class="dot online"></span>
+WEATHER .... ACTIVE
+</div>
+
+
+<div class="status-item">
+<span class="dot online"></span>
+GPWS ........ READY
+</div>
+
+
+<div class="status-item">
+<span class="dot online"></span>
+RADAR ....... ACTIVE
+</div>
+
+
+</div>
+
+
 </section>
+
+
 
 <section class="about-section">
 
 <h2>ABOUT THIS PROJECT</h2>
 
+
 <p>
-The purpose of this website was created as a final project for Code Tenderloin. It explores the history of aviation, explains how modern aircraft systems operate, and highlights significant aviation accidents along with the safety lessons learned from them. The goal of this project is to help others better understand the technology, engineering, and continuous improvements that make aviation one of the safest forms of transportation.
+This website was created as a final project for Code Tenderloin. It explores the history of aviation, explains how modern aircraft systems operate, and highlights significant aviation accidents along with the safety lessons learned from them. The goal of this project is to help others better understand the technology, engineering, and continuous improvements that make aviation one of the safest forms of transportation.
 </p>
+
 
 <div class="creator">
 Created by <strong>Nathan Wong</strong>
 </div>
 
+
 </section>
 
+
+
+<script>
+
+let systems=document.querySelectorAll(".status-item");
+
+
+let names=[
+"TCAS ........ ONLINE",
+"TAWS ........ ONLINE",
+"ADS-B ....... ONLINE",
+"WEATHER .... ACTIVE",
+"GPWS ........ READY",
+"RADAR ....... ACTIVE"
+];
+
+
+setInterval(()=>{
+
+
+let random=Math.floor(Math.random()*systems.length);
+
+
+if(systems[random].querySelector(".dot").classList.contains("online")){
+
+
+systems[random].innerHTML=
+'<span class="dot warning"></span> SYSTEM .... WARNING';
+
+
+setTimeout(()=>{
+
+
+systems[random].innerHTML=
+'<span class="dot online"></span>'+names[random];
+
+
+},4000);
+
+
+}
+
+
+},8000);
+
+
+</script>
+
+
 </body>
+
 </html>
