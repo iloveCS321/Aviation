@@ -191,4 +191,36 @@ to {
     transform:translateY(0);
 }
 
+}.about-section{
+    padding:100px 15%;
+    text-align:center;
+    background:#020604;
+    border-top:1px solid #20ff5533;
+}
+
+.about-section h2{
+    font-size:42px;
+    letter-spacing:6px;
+    color:#d9ffdf;
+    text-shadow:
+        0 0 10px #20ff55,
+        0 0 30px #20ff55;
+    margin-bottom:35px;
+}
+
+.about-section p{
+    max-width:900px;
+    margin:0 auto;
+    color:#b8ffc5;
+    font-size:18px;
+    line-height:1.9;
+    font-family:"Courier New", monospace;
+}
+
+.creator{
+    margin-top:45px;
+    font-size:18px;
+    letter-spacing:3px;
+    color:#39ff14;
+    text-shadow:0 0 10px #39ff14;
 }
