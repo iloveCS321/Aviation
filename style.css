@@ -14,6 +14,7 @@
     height:100%;
     object-fit:cover;
     opacity:0.25;
+    z-index:1;
 }
 
 
@@ -26,6 +27,10 @@
 .hero-content h1{
     font-size:60px;
     letter-spacing:5px;
+    color:#d9ffdf;
+    text-shadow:
+    0 0 10px #20ff55,
+    0 0 30px #20ff55;
 }
 
 
@@ -39,8 +44,10 @@
     radial-gradient(circle, transparent 0 20%, rgba(0,255,100,0.08) 21%, transparent 22%),
     radial-gradient(circle, transparent 0 40%, rgba(0,255,100,0.08) 41%, transparent 42%),
     radial-gradient(circle, transparent 0 60%, rgba(0,255,100,0.08) 61%, transparent 62%);
-    box-shadow:0 0 40px rgba(0,255,100,0.5);
-    z-index:2;
+    box-shadow:
+    0 0 40px rgba(0,255,100,0.5),
+    inset 0 0 40px rgba(0,255,100,0.2);
+    z-index:3;
 }
 
 
