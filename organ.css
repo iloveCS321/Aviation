@@ -106,6 +106,18 @@ body {
     border:1px solid #20ff5544;
     border-radius:50%;
     margin:0 auto 20px auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    box-shadow:0 0 15px #20ff5544;
+}
+
+
+.logo-area img {
+    width:75%;
+    height:75%;
+    object-fit:contain;
 }
 
 
@@ -133,6 +145,55 @@ body {
     color:#20ff55;
     font-size:14px;
     font-weight:bold;
+}
+
+
+
+/* INVESTIGATION TABLE */
+
+.table-title {
+    text-align:center;
+    color:#20ff55;
+    font-size:35px;
+    margin-top:60px;
+    letter-spacing:2px;
+}
+
+
+.aviation-table {
+    width:90%;
+    margin:40px auto 70px auto;
+    border-collapse:collapse;
+    background:#06100b;
+    border:1px solid #20ff5544;
+}
+
+
+.aviation-table th {
+    background:#030907;
+    color:#20ff55;
+    padding:15px;
+    border:1px solid #20ff5544;
+    text-align:left;
+    font-size:16px;
+}
+
+
+.aviation-table td {
+    padding:15px;
+    border:1px solid #20ff5544;
+    color:#cccccc;
+    font-size:15px;
+}
+
+
+.aviation-table tr {
+    transition:0.3s;
+}
+
+
+.aviation-table tr:hover {
+    background:#102418;
 }
 
 
@@ -167,6 +228,12 @@ body {
 .admin-container {
     grid-template-columns:1fr;
     padding:30px;
+}
+
+
+.aviation-table {
+    width:95%;
+    font-size:13px;
 }
 
 }
