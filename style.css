@@ -1,8 +1,9 @@
 body {
     margin:0;
-    background:#050b14;
+    background:#020604;
     color:white;
     font-family:Arial, sans-serif;
+    overflow:hidden;
 }
 
 
@@ -12,8 +13,9 @@ body {
     align-items:center;
     justify-content:space-between;
     padding:0 60px;
-    background:#07101d;
-    border-bottom:1px solid #20364d;
+    background:#030907cc;
+    border-bottom:1px solid #1aff6644;
+    backdrop-filter:blur(10px);
 }
 
 
@@ -21,12 +23,13 @@ body {
     font-size:24px;
     font-weight:bold;
     letter-spacing:3px;
-    text-shadow:0 0 10px #1479ff;
+    color:#d5ffd5;
+    text-shadow:0 0 15px #20ff55;
 }
 
 
 .nav-links a {
-    color:#9fb3c8;
+    color:#8dbb98;
     text-decoration:none;
     margin-left:30px;
     transition:.3s;
@@ -34,8 +37,8 @@ body {
 
 
 .nav-links a:hover {
-    color:white;
-    text-shadow:0 0 10px #1479ff;
+    color:#ffffff;
+    text-shadow:0 0 15px #20ff55;
 }
 
 
@@ -49,8 +52,43 @@ body {
 }
 
 
+.hero::before {
+    content:"";
+    position:absolute;
+    width:700px;
+    height:700px;
+    border-radius:50%;
+    border:2px solid #32ff6a55;
+    background:
+    linear-gradient(#32ff6a18 1px, transparent 1px),
+    linear-gradient(90deg,#32ff6a18 1px, transparent 1px);
+    background-size:50px 50px;
+    box-shadow:
+    0 0 40px #20ff5544,
+    inset 0 0 50px #20ff5522;
+    animation:radarPulse 3s infinite;
+}
+
+
+.hero::after {
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        #32ff6a66
+    );
+    transform-origin:center right;
+    animation:radarSweep 4s linear infinite;
+    opacity:.6;
+}
+
+
 .hero-content {
-    z-index:2;
+    z-index:3;
 }
 
 
@@ -58,10 +96,45 @@ body {
     font-size:70px;
     letter-spacing:10px;
     text-align:center;
+    color:#d9ffdf;
     text-shadow:
-    0 0 10px #1479ff,
-    0 0 30px #1479ff;
+    0 0 10px #20ff55,
+    0 0 30px #20ff55;
     animation:fadeIn 1s ease;
+}
+
+
+.hero-content p {
+    text-align:center;
+    color:#8affaa;
+    letter-spacing:4px;
+    font-family:"Courier New", monospace;
+}
+
+
+.radar-dot {
+    position:absolute;
+    width:10px;
+    height:10px;
+    background:#39ff14;
+    border-radius:50%;
+    box-shadow:0 0 20px #39ff14;
+}
+
+
+.dot1 {
+    top:30%;
+    left:35%;
+}
+
+.dot2 {
+    top:60%;
+    right:35%;
+}
+
+.dot3 {
+    top:45%;
+    right:25%;
 }
 
 
@@ -70,9 +143,46 @@ body {
     width:900px;
     right:-100px;
     bottom:-50px;
-    opacity:.35;
-    filter:drop-shadow(0 0 30px #1479ff);
+    opacity:.18;
+    filter:
+    drop-shadow(0 0 30px #20ff55);
     animation:planeAppear 1.5s ease;
+}
+
+
+@keyframes radarSweep {
+
+from {
+    transform:rotate(0deg);
+}
+
+to {
+    transform:rotate(360deg);
+}
+
+}
+
+
+@keyframes radarPulse {
+
+0% {
+    box-shadow:
+    0 0 20px #20ff5533,
+    inset 0 0 40px #20ff5522;
+}
+
+50% {
+    box-shadow:
+    0 0 70px #20ff5566,
+    inset 0 0 80px #20ff5544;
+}
+
+100% {
+    box-shadow:
+    0 0 20px #20ff5533,
+    inset 0 0 40px #20ff5522;
+}
+
 }
 
 
@@ -99,7 +209,7 @@ from {
 }
 
 to {
-    opacity:.35;
+    opacity:.18;
     transform:translateX(0);
 }
 
