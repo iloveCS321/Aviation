@@ -39,7 +39,9 @@ AVIATION HOMEPAGE
 
 <div class="hero-content">
 
-<h1>AVIATION SYSTEMS</h1>
+<h1>
+AVIATION SYSTEMS
+</h1>
 
 <p>
 Aircraft Monitoring • Safety Systems • Flight Technology
@@ -48,9 +50,12 @@ Aircraft Monitoring • Safety Systems • Flight Technology
 </div>
 
 
+
 <div class="status-panel">
 
-<h2>SYSTEM STATUS</h2>
+<h2>
+SYSTEM STATUS
+</h2>
 
 
 <div class="status-item">
@@ -98,7 +103,9 @@ RADAR ....... ACTIVE
 
 <section class="about-section">
 
-<h2>ABOUT THIS PROJECT</h2>
+<h2>
+ABOUT THIS PROJECT
+</h2>
 
 
 <p>
@@ -119,7 +126,6 @@ Created by <strong>Nathan Wong</strong>
 
 let systems=document.querySelectorAll(".status-item");
 
-
 let names=[
 "TCAS ........ ONLINE",
 "TAWS ........ ONLINE",
@@ -132,28 +138,18 @@ let names=[
 
 setInterval(()=>{
 
-
 let random=Math.floor(Math.random()*systems.length);
 
-
-if(systems[random].querySelector(".dot").classList.contains("online")){
-
-
-systems[random].innerHTML=
+systems[random].innerHTML =
 '<span class="dot warning"></span> SYSTEM .... WARNING';
 
 
 setTimeout(()=>{
 
-
-systems[random].innerHTML=
+systems[random].innerHTML =
 '<span class="dot online"></span>'+names[random];
 
-
 },4000);
-
-
-}
 
 
 },8000);
