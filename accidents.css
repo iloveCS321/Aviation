@@ -55,6 +55,7 @@ body {
     font-family:"Courier New",monospace;
 }
 
+
 .accident-box {
     width:55%;
     margin:50px 0 50px 80px;
@@ -68,12 +69,23 @@ body {
     animation:fadeIn 1s ease;
 }
 
+
+.category-title {
+    color:#39ff14;
+    font-size:20px;
+    letter-spacing:3px;
+    margin-bottom:20px;
+    text-shadow:0 0 10px #39ff14;
+}
+
+
 .accident-grid {
     display:grid;
     grid-template-columns:1fr;
     gap:18px;
     margin-bottom:40px;
 }
+
 
 .accident-item {
     padding:15px;
@@ -87,13 +99,15 @@ body {
     animation:fadeIn .8s ease;
 }
 
+
 .accident-item:hover {
     color:#39ff14;
     transform:translateX(15px);
     text-shadow:0 0 10px #39ff14;
 }
 
-#info-panel {
+
+#accident-panel {
     position:fixed;
     top:100px;
     right:-500px;
@@ -108,9 +122,11 @@ body {
     z-index:10;
 }
 
-#info-panel.show {
+
+#accident-panel.show {
     right:0;
 }
+
 
 #close-btn {
     position:absolute;
@@ -123,12 +139,14 @@ body {
     cursor:pointer;
 }
 
+
 #close-btn:hover {
     color:#39ff14;
     text-shadow:0 0 10px #39ff14;
 }
 
-#info-title {
+
+#accident-title {
     color:#39ff14;
     font-size:32px;
     letter-spacing:2px;
@@ -137,16 +155,19 @@ body {
     0 0 20px #39ff14;
 }
 
-#info-text {
+
+#accident-text {
     color:#b8ffc5;
     line-height:1.7;
     font-size:16px;
 }
 
-#info-text b {
+
+#accident-text b {
     color:white;
     text-shadow:0 0 5px #39ff14;
 }
+
 
 @keyframes fadeIn {
 
