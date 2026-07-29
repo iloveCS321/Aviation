@@ -167,10 +167,12 @@ body {
 .status-panel {
 
     position:absolute;
-    right:80px;
+
+    left:40px;
     top:180px;
 
     width:280px;
+
     padding:25px;
 
     background:#030907cc;
@@ -184,8 +186,8 @@ body {
     backdrop-filter:blur(8px);
 
     z-index:6;
-}
 
+}
 
 
 .status-panel h2 {
@@ -202,7 +204,6 @@ body {
 }
 
 
-
 .status-item {
 
     margin:18px 0;
@@ -214,7 +215,6 @@ body {
     letter-spacing:1px;
 
 }
-
 
 
 .dot {
@@ -232,7 +232,6 @@ body {
 }
 
 
-
 .online {
 
     background:#39ff14;
@@ -243,7 +242,6 @@ body {
 }
 
 
-
 .warning {
 
     background:red;
@@ -252,151 +250,5 @@ body {
     0 0 20px red;
 
     animation:warningPulse .7s infinite;
-
-}
-
-
-
-
-.about-section {
-
-    padding:100px 15%;
-
-    text-align:center;
-
-    background:#020604;
-
-    border-top:1px solid #20ff5533;
-
-}
-
-
-
-.about-section h2 {
-
-    font-size:42px;
-
-    letter-spacing:6px;
-
-    color:#d9ffdf;
-
-    text-shadow:
-    0 0 10px #20ff55,
-    0 0 30px #20ff55;
-
-    margin-bottom:40px;
-
-}
-
-
-
-.about-section p {
-
-    max-width:900px;
-
-    margin:0 auto;
-
-    color:#b8ffc5;
-
-    font-size:18px;
-
-    line-height:1.9;
-
-    font-family:"Courier New",monospace;
-
-}
-
-
-
-.creator {
-
-    margin-top:45px;
-
-    color:#39ff14;
-
-    font-size:18px;
-
-    letter-spacing:3px;
-
-    text-shadow:
-    0 0 10px #39ff14;
-
-}
-
-
-
-
-::-webkit-scrollbar {
-
-    width:12px;
-
-}
-
-
-
-::-webkit-scrollbar-track {
-
-    background:#020604;
-
-}
-
-
-
-::-webkit-scrollbar-thumb {
-
-    background:#20ff55;
-
-    border-radius:10px;
-
-}
-
-
-
-::-webkit-scrollbar-thumb:hover {
-
-    background:#39ff14;
-
-}
-
-
-
-
-@keyframes scan {
-
-from {
-
-    transform:rotate(0deg);
-
-}
-
-to {
-
-    transform:rotate(360deg);
-
-}
-
-}
-
-
-
-@keyframes blipPulse {
-
-50% {
-
-    opacity:.4;
-
-}
-
-}
-
-
-
-@keyframes warningPulse {
-
-50% {
-
-    opacity:.3;
-
-}
 
 }
