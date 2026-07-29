@@ -2,8 +2,7 @@ body {
     margin:0;
     background:#020604;
     color:white;
-    font-family:Arial,sans-serif;
-    overflow-y:auto;
+    font-family:Arial, sans-serif;
 }
 
 
@@ -21,44 +20,54 @@ body {
 .logo {
     font-size:24px;
     font-weight:bold;
-    color:#20ff55;
+    letter-spacing:3px;
+    color:#d5ffd5;
+    text-shadow:0 0 10px #20ff55;
 }
 
 
 .nav-links {
     display:flex;
-    gap:35px;
 }
 
 
 .nav-links a {
-    color:white;
+    color:#8dbb98;
     text-decoration:none;
-    font-size:16px;
-    transition:0.3s;
+    margin-left:30px;
+    transition:.3s;
 }
 
 
 .nav-links a:hover {
-    color:#20ff55;
+    color:white;
+    text-shadow:0 0 10px #20ff55;
 }
+
 
 
 .title {
     text-align:center;
-    font-size:55px;
     margin-top:60px;
-    color:#20ff55;
-    letter-spacing:3px;
+    font-size:55px;
+    letter-spacing:8px;
+    color:#d9ffdf;
+    text-shadow:
+    0 0 10px #20ff55,
+    0 0 30px #20ff55;
+    animation:fadeIn 1s ease;
 }
+
 
 
 .page-description {
     text-align:center;
-    color:#bbbbbb;
+    color:#8affaa;
+    margin-top:-20px;
     font-size:18px;
-    margin-top:15px;
+    font-family:"Courier New",monospace;
 }
+
 
 
 
@@ -72,30 +81,37 @@ body {
 
 
 .admin-box {
-    background:#06100b;
-    border:1px solid #20ff5544;
+    background:#030b05;
+    border:1px solid #20ff5555;
     border-radius:10px;
-    padding:25px;
+    padding:30px;
     min-height:420px;
-    transition:0.3s;
-    box-shadow:0 0 10px #000;
+    box-shadow:
+    0 0 25px #20ff5522,
+    inset 0 0 30px #20ff5511;
+    transition:.3s;
+    animation:fadeIn 1s ease;
 }
+
 
 
 .admin-box:hover {
     transform:translateY(-8px);
-    border-color:#20ff55;
-    box-shadow:0 0 25px #20ff5544;
+    border-color:#39ff14;
+    box-shadow:
+    0 0 35px #20ff5544,
+    inset 0 0 30px #20ff5511;
 }
 
 
 
+
 .region-title {
-    color:#20ff55;
-    font-size:18px;
-    font-weight:bold;
+    color:#39ff14;
+    font-size:20px;
+    letter-spacing:3px;
     margin-bottom:20px;
-    letter-spacing:2px;
+    text-shadow:0 0 10px #39ff14;
 }
 
 
@@ -103,15 +119,18 @@ body {
 .logo-area {
     height:100px;
     width:100px;
-    border:1px solid #20ff5544;
+    border:1px solid #20ff5555;
     border-radius:50%;
     margin:0 auto 20px auto;
     display:flex;
     align-items:center;
     justify-content:center;
     overflow:hidden;
-    box-shadow:0 0 15px #20ff5544;
+    box-shadow:
+    0 0 20px #20ff5533,
+    inset 0 0 15px #20ff5522;
 }
+
 
 
 .logo-area img {
@@ -122,74 +141,89 @@ body {
 
 
 
+
 .admin-name {
     text-align:center;
     font-size:32px;
     font-weight:bold;
+    letter-spacing:2px;
+    color:#d9ffdf;
+    text-shadow:
+    0 0 10px #20ff55;
     margin-bottom:20px;
-    color:white;
 }
 
 
 
 .admin-text {
-    color:#cccccc;
-    line-height:1.6;
-    font-size:15px;
+    color:#b8ffc5;
+    line-height:1.7;
+    font-size:16px;
 }
 
 
 
 .info-line {
     margin-top:25px;
-    color:#20ff55;
+    color:#39ff14;
     font-size:14px;
+    letter-spacing:2px;
     font-weight:bold;
+    text-shadow:0 0 10px #39ff14;
 }
 
 
 
-/* INVESTIGATION TABLE */
 
 .table-title {
     text-align:center;
-    color:#20ff55;
+    color:#d9ffdf;
     font-size:35px;
-    margin-top:60px;
-    letter-spacing:2px;
+    letter-spacing:5px;
+    margin-top:50px;
+    text-shadow:
+    0 0 10px #20ff55,
+    0 0 25px #20ff55;
 }
+
 
 
 .aviation-table {
     width:90%;
     margin:40px auto 70px auto;
     border-collapse:collapse;
-    background:#06100b;
-    border:1px solid #20ff5544;
+    background:#030b05;
+    box-shadow:
+    0 0 25px #20ff5522,
+    inset 0 0 30px #20ff5511;
 }
+
 
 
 .aviation-table th {
-    background:#030907;
-    color:#20ff55;
-    padding:15px;
-    border:1px solid #20ff5544;
-    text-align:left;
-    font-size:16px;
+    color:#39ff14;
+    background:#050d07;
+    padding:18px;
+    border:1px solid #20ff5555;
+    letter-spacing:2px;
+    text-shadow:0 0 10px #39ff14;
 }
+
 
 
 .aviation-table td {
-    padding:15px;
+    color:#b8ffc5;
+    padding:18px;
     border:1px solid #20ff5544;
-    color:#cccccc;
-    font-size:15px;
+    line-height:1.5;
 }
+
 
 
 .aviation-table tr {
-    transition:0.3s;
+    transition:.3s;
 }
+
 
 
 .aviation-table tr:hover {
@@ -215,11 +249,6 @@ body {
 }
 
 
-.nav-links {
-    gap:15px;
-}
-
-
 .title {
     font-size:40px;
 }
@@ -234,6 +263,22 @@ body {
 .aviation-table {
     width:95%;
     font-size:13px;
+}
+
+}
+
+
+
+@keyframes fadeIn {
+
+from {
+    opacity:0;
+    transform:translateY(30px);
+}
+
+to {
+    opacity:1;
+    transform:translateY(0);
 }
 
 }
