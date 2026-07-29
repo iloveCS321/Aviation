@@ -55,6 +55,7 @@ body {
     font-size:18px;
     font-family:"Courier New",monospace;
 }
+
 .admin-container {
     width:85%;
     margin:60px auto;
@@ -84,6 +85,50 @@ body {
     inset 0 0 30px #20ff5522;
 }
 
+.region-title {
+    color:#39ff14;
+    font-size:20px;
+    letter-spacing:3px;
+    text-shadow:0 0 10px #39ff14;
+    margin-bottom:20px;
+}
+
+.logo-area {
+    height:150px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:20px;
+}
+
+.logo-area img {
+    max-width:130px;
+    max-height:130px;
+    filter:drop-shadow(0 0 10px #20ff55);
+}
+
+.admin-name {
+    color:#d9ffdf;
+    font-size:34px;
+    letter-spacing:3px;
+    margin-bottom:20px;
+}
+
+.admin-text {
+    color:#b8ffc5;
+    line-height:1.7;
+    font-size:16px;
+}
+
+.info-line {
+    margin-top:25px;
+    padding:15px;
+    background:#050d07;
+    border-left:3px solid #39ff14;
+    color:#8affaa;
+    font-family:"Courier New",monospace;
+}
+
 @media(max-width:1200px) {
 
     .admin-container {
@@ -92,11 +137,24 @@ body {
 
 }
 
-
 @media(max-width:800px) {
 
     .admin-container {
         grid-template-columns:1fr;
+    }
+
+}
+
+@keyframes fadeIn {
+
+    from {
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to {
+        opacity:1;
+        transform:translateY(0);
     }
 
 }
