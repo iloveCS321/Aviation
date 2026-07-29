@@ -3,7 +3,7 @@ body {
     background:#010201;
     color:white;
     font-family:Arial, sans-serif;
-    overflow:hidden;
+    overflow-x:hidden;
 }
 
 
@@ -43,12 +43,14 @@ body {
 
 
 .hero {
-    height:calc(100vh - 80px);
+    min-height:calc(100vh - 80px);
     position:relative;
     display:flex;
+    flex-direction:column;
     align-items:center;
-    justify-content:center;
+    justify-content:flex-start;
     overflow:hidden;
+    padding-top:60px;
 }
 
 
@@ -66,6 +68,7 @@ body {
     box-shadow:
     0 0 80px #20ff5522,
     inset 0 0 80px #20ff5522;
+    top:100px;
 }
 
 
@@ -81,6 +84,7 @@ body {
         transparent
     );
     animation:scan 5s linear infinite;
+    top:250px;
 }
 
 
@@ -108,9 +112,11 @@ body {
 
 
 .accident-box {
-    position:absolute;
+    position:relative;
     z-index:6;
     width:900px;
+    max-width:80%;
+    margin-top:40px;
     padding:30px;
     background:#020702cc;
     border:1px solid #20ff5566;
@@ -130,7 +136,23 @@ body {
 
 .accident-box p {
     color:#b7ffc4;
-    line-height:1.6;
+    line-height:1.8;
+    font-size:17px;
+}
+
+
+.accident-item {
+    margin-top:20px;
+    padding:20px;
+    background:#030903;
+    border-left:3px solid #39ff14;
+    transition:.3s;
+}
+
+
+.accident-item:hover {
+    transform:translateX(10px);
+    box-shadow:0 0 20px #20ff5533;
 }
 
 
