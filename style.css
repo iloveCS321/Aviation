@@ -1,41 +1,106 @@
-.overview{
-    position:relative;
-    width:100%;
-    height:calc(100vh - 80px);
-    overflow:hidden;
-}
-
-.hero-image{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
-    filter:brightness(.35);
-}
-
-.hero-overlay{
-    position:absolute;
-    inset:0;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-.hero-overlay h1{
+body {
+    margin:0;
+    background:#050b14;
     color:white;
-    font-size:72px;
+    font-family:Arial, sans-serif;
+}
+
+
+.navbar {
+    height:80px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 60px;
+    background:#07101d;
+    border-bottom:1px solid #20364d;
+}
+
+
+.logo {
+    font-size:24px;
+    font-weight:bold;
+    letter-spacing:3px;
+    text-shadow:0 0 10px #1479ff;
+}
+
+
+.nav-links a {
+    color:#9fb3c8;
+    text-decoration:none;
+    margin-left:30px;
+    transition:.3s;
+}
+
+
+.nav-links a:hover {
+    color:white;
+    text-shadow:0 0 10px #1479ff;
+}
+
+
+.hero {
+    height:calc(100vh - 80px);
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+
+.hero-content {
+    z-index:2;
+}
+
+
+.hero-content h1 {
+    font-size:70px;
     letter-spacing:10px;
-    text-shadow:0 0 15px #1479ff,0 0 40px #1479ff;
+    text-align:center;
+    text-shadow:
+    0 0 10px #1479ff,
+    0 0 30px #1479ff;
     animation:fadeIn 1s ease;
 }
 
-@keyframes fadeIn{
-    from{
-        opacity:0;
-        transform:translateY(30px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+
+.hero-plane {
+    position:absolute;
+    width:900px;
+    right:-100px;
+    bottom:-50px;
+    opacity:.35;
+    filter:drop-shadow(0 0 30px #1479ff);
+    animation:planeAppear 1.5s ease;
+}
+
+
+@keyframes fadeIn {
+
+from {
+    opacity:0;
+    transform:translateY(30px);
+}
+
+to {
+    opacity:1;
+    transform:translateY(0);
+}
+
+}
+
+
+@keyframes planeAppear {
+
+from {
+    opacity:0;
+    transform:translateX(100px);
+}
+
+to {
+    opacity:.35;
+    transform:translateX(0);
+}
+
 }
